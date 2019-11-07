@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="鉴于公司项目及业务发展，技术人员从几人到如今几十人，后端团队技术人员日益剧增，可是随着项目人员的增长，大多研发人员及相关人员经常需要到测试环境使用 MySQL 数据库，比如移动端、测试、产品，然而他们需要普及 MySQL 知识点及性能优化的知识，其实性能优化的目标是针对后端研发人员及一些资深的前端人员，可能会从如下大的知识点讲解。 一、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2017&#x2F;06&#x2F;28&#x2F;celery&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="鉴于公司项目及业务发展，技术人员从几人到如今几十人，后端团队技术人员日益剧增，可是随着项目人员的增长，大多研发人员及相关人员经常需要到测试环境使用 MySQL 数据库，比如移动端、测试、产品，然而他们需要普及 MySQL 知识点及性能优化的知识，其实性能优化的目标是针对后端研发人员及一些资深的前端人员，可能会从如下大的知识点讲解。 一、">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-07T14:50:54.194Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/28/celery/"/>
+
+
+
+
+
+  <title>练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/celery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T21:01:40+08:00">
+                2017-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <html>
+
+<div class="mark_content art_article">
+                            <p>鉴于公司项目及业务发展，技术人员从几人到如今几十人，后端团队技术人员日益剧增，可是随着项目人员的增长，大多研发人员及相关人员经常需要到测试环境使用 MySQL 数据库，比如移动端、测试、产品，然而他们需要普及 MySQL 知识点及性能优化的知识，其实性能优化的目标是针对后端研发人员及一些资深的前端人员，可能会从如下大的知识点讲解。</p>
+<h3>一、安装说明</h3>
+<p>首先学习数据库，当然是安装软件。千里之行，始于足下，如果连安装都不会，如何进行后续的入门学习。可是对于安装也有不同方式，比如 RPM 和源码编译安装呢。</p>
+<h4>1.1 RPM 安装包和 Tar 安装包的区别？</h4>
+<p>RPM 直接安装，Tar 属于源码安装，可以设置更多的参数，可以和系统进行更紧密的优化。举个例子，RPM 是 180/96、185/100 之类的标准版型，Tar 源码安装类似于私人定制，量体裁衣的。其实个人觉得 RPM 安装适合小白入门，简单了解下 MySQL，不用做过多安装上的了解，然而源码编译安装适合比如经常跟 MySQL 打交道的工程师，比如 web 研发人员、c++ 工程师等，总不能只是知道如何简单的使用和 curd，其实对于技术人员的纵向知识体系打造是不好的，其实源码编译安装，还可能自己尝试些具体参数的配置。关于 MySQL 官方下载地址：</p>
+<blockquote>
+  <p><a href="https://dev.mysql.com/downloads/mysql/?utm_source=so&amp;utm_source=so" target="_blank" rel="noopener">https://dev.mysql.com/downloads/mysql/</a></p>
+</blockquote>
+<h4>1.2 安装后需要配置哪些内容？</h4>
+<p>不管 RPM 还是源码编译安装后，有些东西必须要设置：</p>
+<ul>
+<li><p>root 初始密码问题：必须设置密码，如果是自己玩还好，如果是线上系统必须设置密码，要不然就是裸跑系统。</p></li>
+<li><p>默认安装后会在指定文件中生成，如果忘记或找不到可以对 root 密码进行强制修改：</p>
+<p>mysqld_safe –skip-grant-tables 2&amp; </p></li>
+<li><p>用户远程访问问题：从安全性角度默认不允许远程访问，可以进行配置，允许远程访问，但是要注意安全性规范。</p>
+<p>grant all privileges on . to ‘root’@’%’ identified by’Password’; 
+flush privileges;</p></li>
+<li><p>UTF-8 编码问题： 关于字符集的问题，可能有些技术人员初次学习数据库时或者初次从事研发工作时，偶尔会碰到，为什么前端信息是正常录入，写入数据库时，变成了乱码？查看数据库的编码方式命令为：</p>
+<p>show variables like 'character%';</p>
+<p>参数说明：
+character<em>set</em>client为客户端编码方式；
+character<em>set</em>connection为建立连接使用的编码；
+character<em>set</em>database数据库的编码；
+character<em>set</em>results结果集的编码；
+character<em>set</em>server数据库务器的编码；</p></li>
+</ul>
+<h4>1.3 my.cnf 文件初始需要配置哪些内容？</h4>
+<ul>
+<li><p>数据文件位置： 确保数据不会把磁盘空间写满，如果有 ssd，可以充分利用 IO 优势。</p></li>
+<li><p>日志文件位置： 快速定位错误日志的位置，根据日志排除错误的能力，是程序员的第一生产力。</p></li>
+<li><p>其他基础参数</p></li>
+<li><p>Myisam系列参数（表级锁）：事务--锁--？</p>
+<p>myisam<em>sort</em>buffer<em>size = 128M   
+myisam</em>max<em>sort</em>file<em>size = 10G   
+myisam</em>max<em>extra</em>sort<em>file</em>size = 10G
+myisam<em>repair</em>threads = 1<br>
+myisam_recover   </p></li>
+<li><p>InnoDB系统参数（行级锁？）：</p>
+<p>innodb<em>additional</em>mem<em>pool</em>size = 16M<br>
+innodb<em>buffer</em>pool<em>size = 2048M   
+innodb</em>data<em>file</em>path = ibdata1:1024M:autoextend<br>
+innodb<em>file</em>io<em>threads = 4   
+innodb</em>thread<em>concurrency = 8   
+innodb</em>flush<em>log</em>at<em>trx</em>commit = 2<br>
+innodb<em>log</em>buffer<em>size = 16M  
+innodb</em>log<em>file</em>size = 128M<br>
+innodb<em>log</em>files<em>in</em>group = 3<br>
+innodb<em>max</em>dirty<em>pages</em>pct = 90<br>
+innodb<em>lock</em>wait<em>timeout = 120   
+innodb</em>file<em>per</em>table = 0 </p></li>
+<li><p>其他参数</p>
+<p>[client]
+port = 3306
+socket =
+                        </p></li></ul></div>
+</html>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/25/%E4%B8%89%E7%B1%BB%E9%97%AD%E5%8C%85%E5%AE%9E%E4%BE%8B%E7%90%86%E8%A7%A3%E9%97%AD%E5%8C%85%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%8D%A0%E7%94%A8%E5%86%85%E5%AD%98/" rel="next" title="三类闭包实例理解闭包为什么会占用内存">
+                <i class="fa fa-chevron-left"></i> 三类闭包实例理解闭包为什么会占用内存
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/28/%E7%BB%83%E4%B9%A0%E7%94%A8%E5%8E%9F%E7%94%9FJavaScript%E7%BC%96%E5%86%99%E4%B8%8EJavaScript%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95slice%E5%8A%9F%E8%83%BD%E4%B8%80%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0/" rel="prev" title="练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数">
+                练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">一、安装说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 RPM 安装包和 Tar 安装包的区别？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 安装后需要配置哪些内容？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 my.cnf 文件初始需要配置哪些内容？</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
