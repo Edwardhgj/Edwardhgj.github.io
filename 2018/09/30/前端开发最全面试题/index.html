@@ -1,85 +1,27 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="en">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="utf-8">
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- PACE Progress Bar START -->
+  
+    <script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
+  <!-- PACE Progress Bar START -->
 
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="分享," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="前端问题记录 HTML相关 CSS相关 JAVASCRIPT相关 DOM相关 HTTP相关 VUE相关 算法相关 网络安全相关 webpack相关 其他Html相关1 html语义化意义：根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。注意： 尽可能少的使用无语义的标签div和span； 在语义不明显时，既可以使用d">
+  
+  <title>前端开发最全面试题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="分享" />
+  
+  
+  
+  
+  <meta name="description" content="前端问题记录 HTML相关 CSS相关 JAVASCRIPT相关 DOM相关 HTTP相关 VUE相关 算法相关 网络安全相关 webpack相关 其他Html相关1 html语义化意义：根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。注意： 尽可能少的使用无语义的标签div和span； 在语义不明显时，既可以使用d">
 <meta name="keywords" content="分享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端开发最全面试题">
@@ -99,236 +41,168 @@
 <meta property="og:updated_time" content="2019-11-07T14:36:15.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;pd4ar0u4q.bkt.clouddn.com&#x2F;h5%E6%96%B0%E5%85%83%E7%B4%A0.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
 
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+  themeMenus["/archives"] = "Archives"; 
+
+  themeMenus["/categories"] = "Categories"; 
+
+  themeMenus["/tags"] = "Tags"; 
+
+  themeMenus["/about"] = "About"; 
+
 </script>
 
 
-
-  <link rel="canonical" href="http://yoursite.com/2018/09/30/前端开发最全面试题/"/>
-
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Hexo" rel="home"> Hexo </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
 
 
-  <title>前端开发最全面试题 | Hexo</title>
-  
+      </div>
+  </div>
+</header>
 
 
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
 
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
 
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
 
-<nav class="site-nav">
-  
 
-  
-    <ul id="menu" class="menu">
-      
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
         
-        <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+          <section id="main" style="float:none;"><article id="post-前端开发最全面试题" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">前端开发最全面试题</h1>
-        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      前端开发最全面试题
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T18:13:33+08:00">
-                2018-09-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">前端周刊</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+    <div class="article-meta">
+      
+	Posted on <a href="/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-date">
+	  <time datetime="2018-09-30T10:13:33.000Z" itemprop="datePublished">September 30, 2018</time>
+	</a>
 
       
-      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
 
+    </div>
+    <div class="article-entry" itemprop="articleBody">
       
         <h3 id="前端问题记录"><a href="#前端问题记录" class="headerlink" title="前端问题记录"></a>前端问题记录</h3><ol>
 <li><a href="#html">HTML相关</a></li>
@@ -647,381 +521,205 @@
 
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+    <footer class="entry-meta entry-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/%E5%88%86%E4%BA%AB/" rel="tag"># 分享</a>
-          
-        </div>
-      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/">前端周刊</a>
 
       
-      
-      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E4%BA%AB/" rel="tag">分享</a></li></ul>
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
             
-              <a href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A-2018%E5%B9%B409%E6%9C%88%E7%AC%AC3%E5%91%A8/" rel="next" title="前端周刊-2018年09月第3周">
-                <i class="fa fa-chevron-left"></i> 前端周刊-2018年09月第3周
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/28/%E6%BB%91%E5%8A%A8%E5%8A%A0%E8%BD%BD/" rel="prev" title="滑动加载">
-                滑动加载 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2018/09/30/前端开发最全面试题/" data-title="前端开发最全面试题" data-url="http://yoursite.com/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"iTimeTraveler"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment-ds.css">
 
-      
+
       
     </footer>
   </div>
   
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
     
-    <div class="sidebar-inner">
+<nav id="article-nav">
+  
+    <a href="/2019/06/28/%E6%BB%91%E5%8A%A8%E5%8A%A0%E8%BD%BD/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          滑动加载
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A-2018%E5%B9%B409%E6%9C%88%E7%AC%AC3%E5%91%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">前端周刊-2018年09月第3周</div>
+    </a>
+  
+</nav>
 
-      
+  
+</article>
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
+<!-- Table of Contents -->
 
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">John Doe</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%20%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">categories</span>
-                
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端问题记录"><span class="nav-number">1.</span> <span class="nav-text">前端问题记录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Html相关"><span class="nav-number">1.1.</span> <span class="nav-text">Html相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-html语义化"><span class="nav-number">1.1.1.</span> <span class="nav-text">1 html语义化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-meta-viewport相关"><span class="nav-number">1.1.2.</span> <span class="nav-text">2 meta viewport相关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-canvas-相关"><span class="nav-number">1.1.3.</span> <span class="nav-text">3 canvas 相关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#新标签兼容低版本"><span class="nav-number">1.1.4.</span> <span class="nav-text">新标签兼容低版本</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS相关"><span class="nav-number">1.2.</span> <span class="nav-text">CSS相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-盒模型"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.盒模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css-reset-和-normalize-css-有什么区别"><span class="nav-number">1.2.2.</span> <span class="nav-text">css reset 和 normalize.css 有什么区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#居中方法"><span class="nav-number">1.2.3.</span> <span class="nav-text">居中方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css优先级确定"><span class="nav-number">1.2.4.</span> <span class="nav-text">css优先级确定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bfc内容见盒模型"><span class="nav-number">1.2.5.</span> <span class="nav-text">bfc内容见盒模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何清除浮动"><span class="nav-number">1.2.6.</span> <span class="nav-text">如何清除浮动</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自适应布局"><span class="nav-number">1.2.7.</span> <span class="nav-text">自适应布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#画三角形"><span class="nav-number">1.2.8.</span> <span class="nav-text">画三角形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#link-import导入css"><span class="nav-number">1.2.9.</span> <span class="nav-text">link @import导入css</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#animation"><span class="nav-number">1.2.10.</span> <span class="nav-text">animation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#长宽比方案"><span class="nav-number">1.2.11.</span> <span class="nav-text">长宽比方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#display相关"><span class="nav-number">1.2.12.</span> <span class="nav-text">display相关</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript相关"><span class="nav-number">1.3.</span> <span class="nav-text">JavaScript相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-“1”-“2”-“3”-map-parseInt"><span class="nav-number">1.3.1.</span> <span class="nav-text">1 [“1”, “2”, “3”].map(parseInt)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-2-1-reduce-Math-pow-reduce-Math-pow"><span class="nav-number">1.3.2.</span> <span class="nav-text">2 [[3,2,1].reduce(Math.pow), [].reduce(Math.pow)]</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3"><span class="nav-number">1.3.3.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-typeof-null-null-instanceof-Object"><span class="nav-number">1.3.4.</span> <span class="nav-text">4 [typeof null, null instanceof Object]</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-js数据类型"><span class="nav-number">1.3.5.</span> <span class="nav-text">5 js数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-promise-用法"><span class="nav-number">1.3.6.</span> <span class="nav-text">6 promise 用法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-es6-promise-ajax"><span class="nav-number">1.3.7.</span> <span class="nav-text">7 es6 promise ajax</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8闭包"><span class="nav-number">1.3.8.</span> <span class="nav-text">8闭包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-什么是立即执行函数？使用立即执行函数的目的是什么？"><span class="nav-number">1.3.9.</span> <span class="nav-text">9 什么是立即执行函数？使用立即执行函数的目的是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#10-async-await-语法"><span class="nav-number">1.3.10.</span> <span class="nav-text">10 async/await 语法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#11-深浅拷贝"><span class="nav-number">1.3.11.</span> <span class="nav-text">11 深浅拷贝</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#12数组去重"><span class="nav-number">1.3.12.</span> <span class="nav-text">12数组去重</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#13正则实现trim-功能"><span class="nav-number">1.3.13.</span> <span class="nav-text">13正则实现trim()功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#14-JS原型"><span class="nav-number">1.3.14.</span> <span class="nav-text">14 JS原型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#16-JS-如何实现继承"><span class="nav-number">1.3.15.</span> <span class="nav-text">16 JS 如何实现继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#17-手写jquery插件"><span class="nav-number">1.3.16.</span> <span class="nav-text">17 手写jquery插件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#18-数组合并去重排序"><span class="nav-number">1.3.17.</span> <span class="nav-text">18 数组合并去重排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#19-call-apply"><span class="nav-number">1.3.18.</span> <span class="nav-text">19 call apply</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#20-for-中setTimeOut"><span class="nav-number">1.3.19.</span> <span class="nav-text">20 for 中setTimeOut</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#21-sort函数"><span class="nav-number">1.3.20.</span> <span class="nav-text">21 sort函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#22-navigator"><span class="nav-number">1.3.21.</span> <span class="nav-text">22 navigator</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#23-jquery绑定方式"><span class="nav-number">1.3.22.</span> <span class="nav-text">23 jquery绑定方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#24-事件流向"><span class="nav-number">1.3.23.</span> <span class="nav-text">24 事件流向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#25原生操作class"><span class="nav-number">1.3.24.</span> <span class="nav-text">25原生操作class</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM相关"><span class="nav-number">1.4.</span> <span class="nav-text">DOM相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#dom事件模型"><span class="nav-number">1.4.1.</span> <span class="nav-text">dom事件模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#移动端触摸事件"><span class="nav-number">1.4.2.</span> <span class="nav-text">移动端触摸事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#事件委托"><span class="nav-number">1.4.3.</span> <span class="nav-text">事件委托</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP相关"><span class="nav-number">1.5.</span> <span class="nav-text">HTTP相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常见状态码"><span class="nav-number">1.5.1.</span> <span class="nav-text">常见状态码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缓存"><span class="nav-number">1.5.2.</span> <span class="nav-text">缓存</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cache-Control-和-Etag-的区别"><span class="nav-number">1.5.3.</span> <span class="nav-text">Cache-Control 和 Etag 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cookie-sessionStorage-localStorage"><span class="nav-number">1.5.4.</span> <span class="nav-text">Cookie sessionStorage  localStorage</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#GET-POST区别"><span class="nav-number">1.5.5.</span> <span class="nav-text">GET POST区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#请求行，请求头，请求体详解"><span class="nav-number">1.5.6.</span> <span class="nav-text">请求行，请求头，请求体详解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#跨域、JSONP-、CORS、postMessage"><span class="nav-number">1.5.7.</span> <span class="nav-text">跨域、JSONP 、CORS、postMessage</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#osi模型"><span class="nav-number">1.5.8.</span> <span class="nav-text">osi模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#http2-0-http1"><span class="nav-number">1.5.9.</span> <span class="nav-text">http2.0 http1</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue相关"><span class="nav-number">1.6.</span> <span class="nav-text">Vue相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生命周期顺序"><span class="nav-number">1.6.1.</span> <span class="nav-text">生命周期顺序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组件通信"><span class="nav-number">1.6.2.</span> <span class="nav-text">组件通信</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Vuex"><span class="nav-number">1.6.3.</span> <span class="nav-text">Vuex</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#VueRouter"><span class="nav-number">1.6.4.</span> <span class="nav-text">VueRouter</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二分查找"><span class="nav-number">1.6.5.</span> <span class="nav-text">二分查找</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二叉树相关"><span class="nav-number">1.6.6.</span> <span class="nav-text">二叉树相关</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络安全相关"><span class="nav-number">1.7.</span> <span class="nav-text">网络安全相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#XSS-CSRF"><span class="nav-number">1.7.1.</span> <span class="nav-text">XSS CSRF</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack相关"><span class="nav-number">1.8.</span> <span class="nav-text"> webpack相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Loader"><span class="nav-number">1.8.1.</span> <span class="nav-text">Loader</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#plugins"><span class="nav-number">1.8.2.</span> <span class="nav-text">plugins</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">1.9.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#URL到界面显示发生了什么"><span class="nav-number">1.9.1.</span> <span class="nav-text">URL到界面显示发生了什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组件封装"><span class="nav-number">1.9.2.</span> <span class="nav-text">组件封装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JS异步加载"><span class="nav-number">1.9.3.</span> <span class="nav-text">JS异步加载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css与js动画差异"><span class="nav-number">1.9.4.</span> <span class="nav-text">css与js动画差异</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#负载均衡"><span class="nav-number">1.9.5.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CDN"><span class="nav-number">1.9.6.</span> <span class="nav-text">CDN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#内存泄漏"><span class="nav-number">1.9.7.</span> <span class="nav-text">内存泄漏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#babel原理"><span class="nav-number">1.9.8.</span> <span class="nav-text">babel原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#promise"><span class="nav-number">1.9.9.</span> <span class="nav-text">promise</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#js自定义事件"><span class="nav-number">1.9.10.</span> <span class="nav-text">js自定义事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#es6模块-commonjs-amd-cmd"><span class="nav-number">1.9.11.</span> <span class="nav-text">es6模块 commonjs  amd cmd</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#前后端路由差别"><span class="nav-number">1.9.12.</span> <span class="nav-text">前后端路由差别</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端问题记录"><span class="nav-number">1.</span> <span class="nav-text">前端问题记录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Html相关"><span class="nav-number">1.1.</span> <span class="nav-text">Html相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-html语义化"><span class="nav-number">1.1.1.</span> <span class="nav-text">1 html语义化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-meta-viewport相关"><span class="nav-number">1.1.2.</span> <span class="nav-text">2 meta viewport相关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-canvas-相关"><span class="nav-number">1.1.3.</span> <span class="nav-text">3 canvas 相关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#新标签兼容低版本"><span class="nav-number">1.1.4.</span> <span class="nav-text">新标签兼容低版本</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS相关"><span class="nav-number">1.2.</span> <span class="nav-text">CSS相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-盒模型"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.盒模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css-reset-和-normalize-css-有什么区别"><span class="nav-number">1.2.2.</span> <span class="nav-text">css reset 和 normalize.css 有什么区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#居中方法"><span class="nav-number">1.2.3.</span> <span class="nav-text">居中方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css优先级确定"><span class="nav-number">1.2.4.</span> <span class="nav-text">css优先级确定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#bfc内容见盒模型"><span class="nav-number">1.2.5.</span> <span class="nav-text">bfc内容见盒模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何清除浮动"><span class="nav-number">1.2.6.</span> <span class="nav-text">如何清除浮动</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#自适应布局"><span class="nav-number">1.2.7.</span> <span class="nav-text">自适应布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#画三角形"><span class="nav-number">1.2.8.</span> <span class="nav-text">画三角形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#link-import导入css"><span class="nav-number">1.2.9.</span> <span class="nav-text">link @import导入css</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#animation"><span class="nav-number">1.2.10.</span> <span class="nav-text">animation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#长宽比方案"><span class="nav-number">1.2.11.</span> <span class="nav-text">长宽比方案</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#display相关"><span class="nav-number">1.2.12.</span> <span class="nav-text">display相关</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript相关"><span class="nav-number">1.3.</span> <span class="nav-text">JavaScript相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-“1”-“2”-“3”-map-parseInt"><span class="nav-number">1.3.1.</span> <span class="nav-text">1 [“1”, “2”, “3”].map(parseInt)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-2-1-reduce-Math-pow-reduce-Math-pow"><span class="nav-number">1.3.2.</span> <span class="nav-text">2 [[3,2,1].reduce(Math.pow), [].reduce(Math.pow)]</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3"><span class="nav-number">1.3.3.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-typeof-null-null-instanceof-Object"><span class="nav-number">1.3.4.</span> <span class="nav-text">4 [typeof null, null instanceof Object]</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-js数据类型"><span class="nav-number">1.3.5.</span> <span class="nav-text">5 js数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-promise-用法"><span class="nav-number">1.3.6.</span> <span class="nav-text">6 promise 用法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-es6-promise-ajax"><span class="nav-number">1.3.7.</span> <span class="nav-text">7 es6 promise ajax</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8闭包"><span class="nav-number">1.3.8.</span> <span class="nav-text">8闭包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9-什么是立即执行函数？使用立即执行函数的目的是什么？"><span class="nav-number">1.3.9.</span> <span class="nav-text">9 什么是立即执行函数？使用立即执行函数的目的是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#10-async-await-语法"><span class="nav-number">1.3.10.</span> <span class="nav-text">10 async/await 语法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#11-深浅拷贝"><span class="nav-number">1.3.11.</span> <span class="nav-text">11 深浅拷贝</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#12数组去重"><span class="nav-number">1.3.12.</span> <span class="nav-text">12数组去重</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#13正则实现trim-功能"><span class="nav-number">1.3.13.</span> <span class="nav-text">13正则实现trim()功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#14-JS原型"><span class="nav-number">1.3.14.</span> <span class="nav-text">14 JS原型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#16-JS-如何实现继承"><span class="nav-number">1.3.15.</span> <span class="nav-text">16 JS 如何实现继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#17-手写jquery插件"><span class="nav-number">1.3.16.</span> <span class="nav-text">17 手写jquery插件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#18-数组合并去重排序"><span class="nav-number">1.3.17.</span> <span class="nav-text">18 数组合并去重排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#19-call-apply"><span class="nav-number">1.3.18.</span> <span class="nav-text">19 call apply</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#20-for-中setTimeOut"><span class="nav-number">1.3.19.</span> <span class="nav-text">20 for 中setTimeOut</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#21-sort函数"><span class="nav-number">1.3.20.</span> <span class="nav-text">21 sort函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#22-navigator"><span class="nav-number">1.3.21.</span> <span class="nav-text">22 navigator</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#23-jquery绑定方式"><span class="nav-number">1.3.22.</span> <span class="nav-text">23 jquery绑定方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#24-事件流向"><span class="nav-number">1.3.23.</span> <span class="nav-text">24 事件流向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#25原生操作class"><span class="nav-number">1.3.24.</span> <span class="nav-text">25原生操作class</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM相关"><span class="nav-number">1.4.</span> <span class="nav-text">DOM相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#dom事件模型"><span class="nav-number">1.4.1.</span> <span class="nav-text">dom事件模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#移动端触摸事件"><span class="nav-number">1.4.2.</span> <span class="nav-text">移动端触摸事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#事件委托"><span class="nav-number">1.4.3.</span> <span class="nav-text">事件委托</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP相关"><span class="nav-number">1.5.</span> <span class="nav-text">HTTP相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常见状态码"><span class="nav-number">1.5.1.</span> <span class="nav-text">常见状态码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缓存"><span class="nav-number">1.5.2.</span> <span class="nav-text">缓存</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cache-Control-和-Etag-的区别"><span class="nav-number">1.5.3.</span> <span class="nav-text">Cache-Control 和 Etag 的区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cookie-sessionStorage-localStorage"><span class="nav-number">1.5.4.</span> <span class="nav-text">Cookie sessionStorage  localStorage</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#GET-POST区别"><span class="nav-number">1.5.5.</span> <span class="nav-text">GET POST区别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#请求行，请求头，请求体详解"><span class="nav-number">1.5.6.</span> <span class="nav-text">请求行，请求头，请求体详解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#跨域、JSONP-、CORS、postMessage"><span class="nav-number">1.5.7.</span> <span class="nav-text">跨域、JSONP 、CORS、postMessage</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#osi模型"><span class="nav-number">1.5.8.</span> <span class="nav-text">osi模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#http2-0-http1"><span class="nav-number">1.5.9.</span> <span class="nav-text">http2.0 http1</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue相关"><span class="nav-number">1.6.</span> <span class="nav-text">Vue相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#生命周期顺序"><span class="nav-number">1.6.1.</span> <span class="nav-text">生命周期顺序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组件通信"><span class="nav-number">1.6.2.</span> <span class="nav-text">组件通信</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Vuex"><span class="nav-number">1.6.3.</span> <span class="nav-text">Vuex</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#VueRouter"><span class="nav-number">1.6.4.</span> <span class="nav-text">VueRouter</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二分查找"><span class="nav-number">1.6.5.</span> <span class="nav-text">二分查找</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二叉树相关"><span class="nav-number">1.6.6.</span> <span class="nav-text">二叉树相关</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络安全相关"><span class="nav-number">1.7.</span> <span class="nav-text">网络安全相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#XSS-CSRF"><span class="nav-number">1.7.1.</span> <span class="nav-text">XSS CSRF</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webpack相关"><span class="nav-number">1.8.</span> <span class="nav-text"> webpack相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Loader"><span class="nav-number">1.8.1.</span> <span class="nav-text">Loader</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#plugins"><span class="nav-number">1.8.2.</span> <span class="nav-text">plugins</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">1.9.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#URL到界面显示发生了什么"><span class="nav-number">1.9.1.</span> <span class="nav-text">URL到界面显示发生了什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组件封装"><span class="nav-number">1.9.2.</span> <span class="nav-text">组件封装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JS异步加载"><span class="nav-number">1.9.3.</span> <span class="nav-text">JS异步加载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css与js动画差异"><span class="nav-number">1.9.4.</span> <span class="nav-text">css与js动画差异</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#负载均衡"><span class="nav-number">1.9.5.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CDN"><span class="nav-number">1.9.6.</span> <span class="nav-text">CDN</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#内存泄漏"><span class="nav-number">1.9.7.</span> <span class="nav-text">内存泄漏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#babel原理"><span class="nav-number">1.9.8.</span> <span class="nav-text">babel原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#promise"><span class="nav-number">1.9.9.</span> <span class="nav-text">promise</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#js自定义事件"><span class="nav-number">1.9.10.</span> <span class="nav-text">js自定义事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#es6模块-commonjs-amd-cmd"><span class="nav-number">1.9.11.</span> <span class="nav-text">es6模块 commonjs  amd cmd</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#前后端路由差别"><span class="nav-number">1.9.12.</span> <span class="nav-text">前后端路由差别</span></a></li></ol></li></ol></li></ol>
+    
     </div>
   </aside>
-
-
+</section>
         
       </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-
+      <footer id="footer" class="site-footer">
   
-</div>
 
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Hexo All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
       </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
       </div>
-    
-
-    
-
   </div>
+</footer>
 
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+    </div>
+    <!-- <nav id="mobile-nav">
   
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 
+<script src="/js/scripts.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 
 
-  
 
 
 
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
 
 
 
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
 
 
 
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  </div>
 
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>

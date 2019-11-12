@@ -1,449 +1,281 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="en">
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="utf-8">
 
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- PACE Progress Bar START -->
+  
+    <script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
+  <!-- PACE Progress Bar START -->
 
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
 
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+  themeMenus["/archives"] = "Archives"; 
+
+  themeMenus["/categories"] = "Categories"; 
+
+  themeMenus["/tags"] = "Tags"; 
+
+  themeMenus["/about"] = "About"; 
+
 </script>
 
 
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
+  <body>
 
 
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Hexo" rel="home"> Hexo </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
 
 
-  <title>Hexo</title>
-  
+      </div>
+  </div>
+</header>
 
 
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
 
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
 
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
 
-<nav class="site-nav">
-  
 
-  
-    <ul id="menu" class="menu">
-      
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
         
-        <li class="menu-item menu-item-home">
-          <a href="/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-
-      
-    </ul>
+          <section id="main">
   
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
+    <article id="post-redis全解"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/%E6%BB%91%E5%8A%A8%E5%8A%A0%E8%BD%BD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/28/%E6%BB%91%E5%8A%A8%E5%8A%A0%E8%BD%BD/" itemprop="url">滑动加载</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/10/08/redis%E5%85%A8%E8%A7%A3/">redis全解</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-28T21:01:40+08:00">
-                2019-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/10/08/redis%E5%85%A8%E8%A7%A3/" class="article-date">
+	  <time datetime="2019-10-08T08:55:29.000Z" itemprop="datePublished">October 8, 2019</time>
+	</a>
 
       
+    </div>
+    <div class="article-entry" itemprop="articleBody">
       
-
-      
-        
-          
-            <p>###滑动加载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li v-for=&quot;item in newslist&quot;&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;item.num&#125;&#125;&lt;/h2&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;div v-show=&quot;change&quot;&gt;到底部了&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import axios from &quot;axios&quot;</span><br><span class="line">export default &#123;</span><br><span class="line">    name:&apos;numbers&apos;,</span><br><span class="line">    data()&#123;</span><br><span class="line">        return&#123;</span><br><span class="line">            oneNews:&apos;&apos;,</span><br><span class="line">            newslist:[],</span><br><span class="line">            change:false,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;  </span><br><span class="line"> </span><br><span class="line">        axios(&#123;</span><br><span class="line">      url: &quot;/api/addnums&quot;,</span><br><span class="line">      method: &quot;get&quot;,</span><br><span class="line">      data: &apos;&apos;</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line">      if (res.data.code == 200) &#123;</span><br><span class="line">        this.oneNews = res.data.oneNews;</span><br><span class="line">        this.oneNews.forEach((obj,index)=&gt;&#123;</span><br><span class="line">            if(index&lt;5)&#123;</span><br><span class="line">                this.newslist.push(this.oneNews.shift());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125; </span><br><span class="line">    &#125;);</span><br><span class="line">    this.$nextTick(function () &#123;</span><br><span class="line">      window.addEventListener(&apos;scroll&apos;, this.onScroll)</span><br><span class="line">    &#125;)  </span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">    // 获取滚动条当前的位置</span><br><span class="line">        </span><br><span class="line">    getScrollTop () &#123;</span><br><span class="line">      var scrollTop = 0</span><br><span class="line">      if (document.documentElement &amp;&amp; document.documentElement.scrollTop) &#123;</span><br><span class="line">        scrollTop = document.documentElement.scrollTop</span><br><span class="line">      &#125; else if (document.body) &#123;</span><br><span class="line">        scrollTop = document.body.scrollTop</span><br><span class="line">      &#125;</span><br><span class="line">      return scrollTop</span><br><span class="line">    &#125;,</span><br><span class="line">    // 获取当前可视范围的高度</span><br><span class="line">    getClientHeight () &#123;</span><br><span class="line">      var clientHeight = 0</span><br><span class="line">      if (document.body.clientHeight &amp;&amp; document.documentElement.clientHeight) &#123;</span><br><span class="line">        clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight)</span><br><span class="line">      &#125;</span><br><span class="line">      return clientHeight</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    // 获取文档完整的高度</span><br><span class="line">    getScrollHeight () &#123;</span><br><span class="line">      return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)</span><br><span class="line">    &#125;,</span><br><span class="line">    // 滚动事件触发下拉加载</span><br><span class="line">    onScroll () &#123;</span><br><span class="line">      if (this.getScrollHeight() - this.getClientHeight() - this.getScrollTop() &lt;= 0) &#123;</span><br><span class="line">       for (var i = 0; i &lt;5;i++) &#123;</span><br><span class="line">           if(this.oneNews.length&gt;0)&#123;</span><br><span class="line">               this.newslist.push(this.oneNews.shift())</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">               this.change=true</span><br><span class="line">               return</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-
-          
         
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="entry-meta entry-footer">
       
       
-        <div class="post-eof"></div>
+      
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-滑动加载"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url">前端开发最全面试题</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/06/28/%E6%BB%91%E5%8A%A8%E5%8A%A0%E8%BD%BD/">滑动加载</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T18:13:33+08:00">
-                2018-09-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">前端周刊</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2019/06/28/%E6%BB%91%E5%8A%A8%E5%8A%A0%E8%BD%BD/" class="article-date">
+	  <time datetime="2019-06-28T13:01:40.000Z" itemprop="datePublished">June 28, 2019</time>
+	</a>
 
       
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###滑动加载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li v-for=&quot;item in newslist&quot;&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;item.num&#125;&#125;&lt;/h2&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;div v-show=&quot;change&quot;&gt;到底部了&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import axios from &quot;axios&quot;</span><br><span class="line">export default &#123;</span><br><span class="line">    name:&apos;numbers&apos;,</span><br><span class="line">    data()&#123;</span><br><span class="line">        return&#123;</span><br><span class="line">            oneNews:&apos;&apos;,</span><br><span class="line">            newslist:[],</span><br><span class="line">            change:false,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;  </span><br><span class="line"> </span><br><span class="line">        axios(&#123;</span><br><span class="line">      url: &quot;/api/addnums&quot;,</span><br><span class="line">      method: &quot;get&quot;,</span><br><span class="line">      data: &apos;&apos;</span><br><span class="line">    &#125;).then(res =&gt; &#123;</span><br><span class="line">      if (res.data.code == 200) &#123;</span><br><span class="line">        this.oneNews = res.data.oneNews;</span><br><span class="line">        this.oneNews.forEach((obj,index)=&gt;&#123;</span><br><span class="line">            if(index&lt;5)&#123;</span><br><span class="line">                this.newslist.push(this.oneNews.shift());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125; </span><br><span class="line">    &#125;);</span><br><span class="line">    this.$nextTick(function () &#123;</span><br><span class="line">      window.addEventListener(&apos;scroll&apos;, this.onScroll)</span><br><span class="line">    &#125;)  </span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">    // 获取滚动条当前的位置</span><br><span class="line">        </span><br><span class="line">    getScrollTop () &#123;</span><br><span class="line">      var scrollTop = 0</span><br><span class="line">      if (document.documentElement &amp;&amp; document.documentElement.scrollTop) &#123;</span><br><span class="line">        scrollTop = document.documentElement.scrollTop</span><br><span class="line">      &#125; else if (document.body) &#123;</span><br><span class="line">        scrollTop = document.body.scrollTop</span><br><span class="line">      &#125;</span><br><span class="line">      return scrollTop</span><br><span class="line">    &#125;,</span><br><span class="line">    // 获取当前可视范围的高度</span><br><span class="line">    getClientHeight () &#123;</span><br><span class="line">      var clientHeight = 0</span><br><span class="line">      if (document.body.clientHeight &amp;&amp; document.documentElement.clientHeight) &#123;</span><br><span class="line">        clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight)</span><br><span class="line">      &#125;</span><br><span class="line">      return clientHeight</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    // 获取文档完整的高度</span><br><span class="line">    getScrollHeight () &#123;</span><br><span class="line">      return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)</span><br><span class="line">    &#125;,</span><br><span class="line">    // 滚动事件触发下拉加载</span><br><span class="line">    onScroll () &#123;</span><br><span class="line">      if (this.getScrollHeight() - this.getClientHeight() - this.getScrollTop() &lt;= 0) &#123;</span><br><span class="line">       for (var i = 0; i &lt;5;i++) &#123;</span><br><span class="line">           if(this.oneNews.length&gt;0)&#123;</span><br><span class="line">               this.newslist.push(this.oneNews.shift())</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">               this.change=true</span><br><span class="line">               return</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-前端开发最全面试题"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-          
-            <h3 id="前端问题记录"><a href="#前端问题记录" class="headerlink" title="前端问题记录"></a>前端问题记录</h3><ol>
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/">前端开发最全面试题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-date">
+	  <time datetime="2018-09-30T10:13:33.000Z" itemprop="datePublished">September 30, 2018</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前端问题记录"><a href="#前端问题记录" class="headerlink" title="前端问题记录"></a>前端问题记录</h3><ol>
 <li><a href="#html">HTML相关</a></li>
 <li><a href="#css">CSS相关</a></li>
 <li><a href="#javascript">JAVASCRIPT相关</a></li>
@@ -758,147 +590,55 @@
 </ol>
 <h5 id="前后端路由差别"><a href="#前后端路由差别" class="headerlink" title="前后端路由差别"></a>前后端路由差别</h5><p>1.后端每次路由请求都是重新访问服务器<br>2.前端路由实际上只是JS根据URL来操作DOM元素，根据每个页面需要的去服务端请求数据，返回数据后和模板进行组合。</p>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+    <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/">前端周刊</a>
 
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E4%BA%AB/" rel="tag">分享</a></li></ul>
 
       
-
-      
-      
-        <div class="post-eof"></div>
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A-2018%E5%B9%B409%E6%9C%88%E7%AC%AC3%E5%91%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-前端周刊-2018年09月第3周"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A-2018%E5%B9%B409%E6%9C%88%E7%AC%AC3%E5%91%A8/" itemprop="url">前端周刊-2018年09月第3周</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A-2018%E5%B9%B409%E6%9C%88%E7%AC%AC3%E5%91%A8/">前端周刊-2018年09月第3周</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-21T16:24:00+08:00">
-                2018-09-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">前端周刊</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A-2018%E5%B9%B409%E6%9C%88%E7%AC%AC3%E5%91%A8/" class="article-date">
+	  <time datetime="2018-09-21T08:24:00.000Z" itemprop="datePublished">September 21, 2018</time>
+	</a>
 
       
-        
-          
-            <h2 id="编写「可读」代码的实践"><a href="#编写「可读」代码的实践" class="headerlink" title="编写「可读」代码的实践"></a><a href="http://taobaofed.org/blog/2017/01/05/writing-readable-code/" target="_blank" rel="noopener">编写「可读」代码的实践</a></h2><p><strong>链接:</strong><br><a href="http://taobaofed.org/blog/2017/01/05/writing-readable-code/" target="_blank" rel="noopener">http://taobaofed.org/blog/2017/01/05/writing-readable-code/</a></p>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="编写「可读」代码的实践"><a href="#编写「可读」代码的实践" class="headerlink" title="编写「可读」代码的实践"></a><a href="http://taobaofed.org/blog/2017/01/05/writing-readable-code/" target="_blank" rel="noopener">编写「可读」代码的实践</a></h2><p><strong>链接:</strong><br><a href="http://taobaofed.org/blog/2017/01/05/writing-readable-code/" target="_blank" rel="noopener">http://taobaofed.org/blog/2017/01/05/writing-readable-code/</a></p>
 <p><strong>摘要</strong><br>伟大的文学作品都是建立在废纸堆上的，不断删改作品的过程有助于写作者培养良好的「语感」。当然，代码毕竟不是艺术品，程序员没有精力也不一定有必要像作家一样反复打磨自己的代码/作品。但是，如果我们能够在编写代码时稍稍多考虑一下实现的合理性，或者在添加新功能的时候稍稍回顾一下之前的实现，我们就能够培养出一些「代码语感」。这种「代码语感」会非常有助于我们写出高质量的可读的代码。</p>
 <h2 id="React-Redux-组件化方案"><a href="#React-Redux-组件化方案" class="headerlink" title="React + Redux 组件化方案"></a><a href="http://imweb.io/topic/57c531bc6227a4f55a8872c2" target="_blank" rel="noopener">React + Redux 组件化方案</a></h2><p><strong>链接:</strong><br><a href="http://imweb.io/topic/57c531bc6227a4f55a8872c2" target="_blank" rel="noopener">http://imweb.io/topic/57c531bc6227a4f55a8872c2</a></p>
 <p><strong>摘要</strong><br>组件化方案:理想中的组件化，第一步应该就是组件的标签化， 例如有一个 Header 组件，无需关注组件内部的实现，我们只需要使用一个 <Header/> 标签就能调用它，通过设置属性的方式，来控制它的显示的内容，和对应的事件。借助 jsx 语法，React 已经实现上述想法。<br>但是由于 React 的数据流向是单向的， 子组件的数据和方法只能由父级组件赋予，一旦组件嵌套层次变深，传递数据将会变得非常复杂。<br>redux 框架解决了这个问题，简单来说，它将 react 由父级传递数据，变为了由一个统一的数据源 store 单向地向各个组件传递数据。<br>所有数据都存放在 store 中，组件内部不维护任何数据。</p>
@@ -936,147 +676,55 @@
 <li>vuex是什么？怎么使用？哪种功能场景使用它<br>只用来读取的状态集中放在store中； 改变状态的方式是提交mutations，这是个同步的事物； 异步逻辑应该封装在action中。<br>在main.js引入store，注入。新建了一个目录store，….. export 。<br>场景有：单页应用中，组件之间的状态、音乐播放、登录状态、加入购物车</li>
 </ul>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+    <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/">前端周刊</a>
 
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E4%BA%AB/" rel="tag">分享</a></li></ul>
 
       
-
-      
-      
-        <div class="post-eof"></div>
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83-used-by-frank/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-前端开发规范-used-by-frank"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83-used-by-frank/" itemprop="url">前端开发规范-used by frank</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83-used-by-frank/">前端开发规范-used by frank</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-21T16:20:34+08:00">
-                2018-09-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83-used-by-frank/" class="article-date">
+	  <time datetime="2018-09-21T08:20:34.000Z" itemprop="datePublished">September 21, 2018</time>
+	</a>
 
       
-        
-          
-            <h3 id="js方法注释规范"><a href="#js方法注释规范" class="headerlink" title="js方法注释规范"></a>js方法注释规范</h3><h3 id="规范的注释很重要"><a href="#规范的注释很重要" class="headerlink" title="规范的注释很重要"></a>规范的注释很重要</h3><p>代码是写给人看的，顺便给机器运行，多谢注释可以增加代码的可读性</p>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="js方法注释规范"><a href="#js方法注释规范" class="headerlink" title="js方法注释规范"></a>js方法注释规范</h3><h3 id="规范的注释很重要"><a href="#规范的注释很重要" class="headerlink" title="规范的注释很重要"></a>规范的注释很重要</h3><p>代码是写给人看的，顺便给机器运行，多谢注释可以增加代码的可读性</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment">**************</span></span><br><span class="line"><span class="comment"> * @func 教师端请假功能 ;</span></span><br><span class="line"><span class="comment"> * @param &#123;String&#125; token 教师端头部的token;</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; a - 参数a;</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; b=1 - 参数b默认值为1;</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; c=1 - 参数c有两种支持的取值&lt;/br&gt;1—表示x&lt;/br&gt;2—表示xx;</span></span><br><span class="line"><span class="comment"> * @param &#123;object&#125; d - 参数d为一个对象;</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; d.e - 参数d的e属性;</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; d.f - 参数d的f属性;</span></span><br><span class="line"><span class="comment"> * @param &#123;object[]&#125; g - 参数g为一个对象数组;</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; g.h - 参数g数组中一项的h属性;</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; g.i - 参数g数组中一项的i属性;</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; [j] - 参数j是一个可选参数;</span></span><br><span class="line"><span class="comment"> * @description  2018年4月19日被frank开发于dev_sprint65分支，</span></span><br><span class="line"><span class="comment"> *   XX年XX月被XX在xx分支修改（原因或者修改的功能）;</span></span><br><span class="line"><span class="comment"> ****************/</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h3><p>1.标准变量命名使用驼峰式命名           <code>eg. let thisIsMyName;</code><br>2.常量全部大写，并使用下划线连接       <code>eg.  const MAX_COUNT = 10;</code></p>
@@ -1096,147 +744,55 @@
 
 <p>文档：有时间整理一下<a href="http://taobaofed.org/blog/2017/01/05/writing-readable-code/" target="_blank" rel="noopener">http://taobaofed.org/blog/2017/01/05/writing-readable-code/</a></p>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+    <footer class="entry-meta entry-footer">
       
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
 
       
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag">前端自动化</a></li></ul>
 
       
-
-      
-      
-        <div class="post-eof"></div>
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub-io%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-使用hexo搭建github-io博客"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub-io%E5%8D%9A%E5%AE%A2/" itemprop="url">使用hexo搭建github.io博客</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/09/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub-io%E5%8D%9A%E5%AE%A2/">使用hexo搭建github.io博客</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T10:57:11+08:00">
-                2018-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2018/09/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub-io%E5%8D%9A%E5%AE%A2/" class="article-date">
+	  <time datetime="2018-09-07T02:57:11.000Z" itemprop="datePublished">September 7, 2018</time>
+	</a>
 
       
-        
-          
-            <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><blockquote>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><blockquote>
 <p>回顾一下我三年搭建博客的历程，最初是选择wordpress，Wordpress全部由php编写，数组库采用MySQL。优点：用户只需要将Wordpress的源代码复制到网站根目录下，然后访问网站，之后的安装操作全部在浏览器上完成。即使不是软件行业的人，也可以在几分钟之内完成安装工作。甚至很多虚拟主机供应商都提供了Wordpress的一键式安装工具。用户连上传文件的步骤都省了。缺点：项目太臃肿了，Wordpress耗损CPU严重，不容易操作，运行稍慢。尤其是后期文章数目较多的时候，想要登陆下网站的管理后台，心态简直是抓狂的。loading了好久，有时候还会失败，发一篇文章也很费劲，索性就不维护了。<br>后来在github网站上找到一个vue模板：<a href="https://github.com/ye63/vue-blog-use-github-issues" target="_blank" rel="noopener">github地址</a>和<a href="https://ye63.com/jy/" target="_blank" rel="noopener">demo预览</a>二次开发了一下，的确是实现了很多功能，也挺轻便的，样式也可以自定义，博客可以直接写在github的issue，很方便，用了三个月后才发现百度的搜索引擎居然只收录了首页，搜索引擎的基础爬虫的原理就是抓取你的url，然后获取你的html源代码并解析。 而你的页面通常用了vue等js的数据绑定机制来展示页面数据，爬虫获取到的html是你的模型页面而不是最终数据的渲染页面，所以说用js来渲染数据对seo并不友好。而且github api在国内访问速度也没有想象中那么快，可能是github的CDN被墙屏了。<br> 使用github.io可以搭建一个自己的博客,把静态文件项目托管到github上,可以写博客,可以使用markdown语法,也可以展示作品.灵活性高.但是有较大的难度,但是这对于一个熟悉git操作的前端开发工程师来说，都不算什么的。重点是hexo和github.io的域名和服务器都是<strong>免费</strong>的。当然也可以选择用自己的服务器和域名。</p>
 </blockquote>
 <h3 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h3><h4 id="安装-node-git，注册好github账号"><a href="#安装-node-git，注册好github账号" class="headerlink" title="安装 node,git，注册好github账号"></a>安装 node,git，注册好github账号</h4><p> (网站有很多教程，安装方法这里就不详细展开了，<strong>注意:github账号用户名一定不能有大写.</strong>)</p>
@@ -1285,125 +841,52 @@
 
 
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+    <footer class="entry-meta entry-footer">
       
-
-      
-
-      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Hexo%E6%95%99%E7%A8%8B/">Hexo教程</a>
 
       
       
-        <div class="post-eof"></div>
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/28/hello-world/" itemprop="url">Hello world</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/06/28/hello-world/">Hello world</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T21:01:40+08:00">
-                2017-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2017/06/28/hello-world/" class="article-date">
+	  <time datetime="2017-06-28T13:01:40.000Z" itemprop="datePublished">June 28, 2017</time>
+	</a>
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -1417,249 +900,97 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="entry-meta entry-footer">
       
       
-        <div class="post-eof"></div>
+      
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/%E7%BB%83%E4%B9%A0%E7%94%A8%E5%8E%9F%E7%94%9FJavaScript%E7%BC%96%E5%86%99%E4%B8%8EJavaScript%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95slice%E5%8A%9F%E8%83%BD%E4%B8%80%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/28/%E7%BB%83%E4%B9%A0%E7%94%A8%E5%8E%9F%E7%94%9FJavaScript%E7%BC%96%E5%86%99%E4%B8%8EJavaScript%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95slice%E5%8A%9F%E8%83%BD%E4%B8%80%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0/" itemprop="url">练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/06/28/%E7%BB%83%E4%B9%A0%E7%94%A8%E5%8E%9F%E7%94%9FJavaScript%E7%BC%96%E5%86%99%E4%B8%8EJavaScript%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95slice%E5%8A%9F%E8%83%BD%E4%B8%80%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0/">练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T21:01:40+08:00">
-                2017-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2017/06/28/%E7%BB%83%E4%B9%A0%E7%94%A8%E5%8E%9F%E7%94%9FJavaScript%E7%BC%96%E5%86%99%E4%B8%8EJavaScript%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95slice%E5%8A%9F%E8%83%BD%E4%B8%80%E6%A0%B7%E7%9A%84%E5%87%BD%E6%95%B0/" class="article-date">
+	  <time datetime="2017-06-28T13:01:40.000Z" itemprop="datePublished">June 28, 2017</time>
+	</a>
 
       
-        
-          
-            <p>刚刚开始的时候感觉不太难，越写越发现之前忽略的可能性很多。</p>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>刚刚开始的时候感觉不太难，越写越发现之前忽略的可能性很多。</p>
 <p>当只有一个变量的时候，把代码写出来不是特别困难。可当有两个变量的时候，情况就复杂了很多。我在刚开始写的时候就在想如何把冗余的代码裁减掉，结果就是大脑宕机。最后老老实实的在纸上，用最笨的方法把所有的可能性都列出来，再去想如何把类似的代码拿出来就变得很容易了。</p>
 <p>所以，如果觉得大脑硬件不够用了，那就用最笨的办法先去把事情做了，然后再去优化。</p>
 <p>最后写出来的东西</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.mySlice = function () &#123;</span><br><span class="line">    var n = arguments[0];</span><br><span class="line">    var m = arguments[1];</span><br><span class="line">    if (n &gt;= 0) &#123;</span><br><span class="line">        var nN = Math.floor(n);</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        var nN = Math.ceil(n);</span><br><span class="line">    &#125;</span><br><span class="line">    if (m &gt;= 0) &#123;</span><br><span class="line">        var nM = Math.floor(m);</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        var nM = Math.ceil(m);</span><br><span class="line">    &#125;</span><br><span class="line">    var aArray1 = [];</span><br><span class="line">    if (arguments.length == 1) &#123;</span><br><span class="line">        if (nN &lt;= -this.length) &#123;</span><br><span class="line">            for (var i = 0; i &lt; this.length; i++) &#123;</span><br><span class="line">                aArray1[i] = this[i];</span><br><span class="line">            &#125;</span><br><span class="line">            return aArray1;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (nN &gt; -this.length &amp;&amp; nN &lt; 0) &#123;</span><br><span class="line">            for (var i = 0; i &lt; -nN; i++) &#123;</span><br><span class="line">                aArray1[i] = this[nN + this.length + i];</span><br><span class="line">            &#125;</span><br><span class="line">            return aArray1;</span><br><span class="line">        &#125;else if (nN == 0) &#123;</span><br><span class="line">            for (var i = 0; i &lt; this.length; i++) &#123;</span><br><span class="line">                aArray1[i] = this[i];</span><br><span class="line">            &#125;</span><br><span class="line">            return aArray1;</span><br><span class="line">        &#125;else if (nN &gt; 0 &amp;&amp; nN &lt;= this.length) &#123;</span><br><span class="line">            for (var i = 0; i &lt; this.length - nN; i++) &#123;</span><br><span class="line">                aArray1[i] = this[nN + i]</span><br><span class="line">            &#125;</span><br><span class="line">            return aArray1;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            return [];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        if (nN + 1 &gt; this.length) &#123;</span><br><span class="line">            return [];</span><br><span class="line">        &#125;else if (nM &lt; -this.length) &#123;</span><br><span class="line">            return [];</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            if (nN &gt;= 0) &#123;</span><br><span class="line">                if (nM &gt;= 0 &amp;&amp; nM &lt;= this.length-1) &#123;</span><br><span class="line">                    if (nN &gt;= nM) &#123;</span><br><span class="line">                        return [];</span><br><span class="line">                    &#125;else &#123;</span><br><span class="line">                        for (var i = 0; i &lt; (nM - nN); i++) &#123;</span><br><span class="line">                            aArray1[i] = this[nN + i];</span><br><span class="line">                        &#125;</span><br><span class="line">                        return aArray1;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (nM &gt; this.length-1) &#123;</span><br><span class="line">                    for (var i = 0; i &lt; this.length - nN; i++) &#123;</span><br><span class="line">                        aArray1[i] = this[nN + i];</span><br><span class="line">                    &#125;</span><br><span class="line">                    return aArray1;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (nM &lt;= -1) &#123;</span><br><span class="line">                    if ((-nM + nN) &gt;= this.length) &#123;</span><br><span class="line">                        return [];</span><br><span class="line">                    &#125;else &#123;</span><br><span class="line">                        for (var i = 0; i &lt; (this.length + nM - nN); i++) &#123;</span><br><span class="line">                            aArray1[i] = this[nN + i];</span><br><span class="line">                        &#125;</span><br><span class="line">                        return aArray1;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else &#123;</span><br><span class="line">                    return [];</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            else if (nN &lt;= -1 &amp;&amp; nN &gt; -this.length) &#123;</span><br><span class="line">                if (nM &gt; 0 &amp;&amp; nM &lt;= this.length-1) &#123;</span><br><span class="line">                    if (- nN + nM &lt;= this.length) &#123;</span><br><span class="line">                        return [];</span><br><span class="line">                    &#125;else &#123;</span><br><span class="line">                        for (var i = 0; i &lt; nM - nN - this.length; i++) &#123;</span><br><span class="line">                            aArray1[i] = this[nN + this.length + i];</span><br><span class="line">                        &#125;</span><br><span class="line">                        return aArray1;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (nM &gt; this.length-1) &#123;</span><br><span class="line">                    for (var i = 0; i &lt; -nN; i++) &#123;</span><br><span class="line">                        aArray1[i] = this[this.length + nN + i];</span><br><span class="line">                    &#125;</span><br><span class="line">                    return aArray1;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (nM &lt;= -1) &#123;</span><br><span class="line">                    if (nN &lt; nM) &#123;</span><br><span class="line">                        for (var i = 0; i &lt; (nM - nN); i++) &#123;</span><br><span class="line">                            aArray1[i] = this[this.length + nN + i];</span><br><span class="line">                        &#125;</span><br><span class="line">                        return aArray1;</span><br><span class="line">                    &#125;else &#123;</span><br><span class="line">                        return [];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else &#123;</span><br><span class="line">                    return [];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                if (nM &gt; 0 &amp;&amp; nM &lt;= this.length -1) &#123;</span><br><span class="line">                    for (var i = 0; i &lt; nM; i++) &#123;</span><br><span class="line">                        aArray1[i] = this[i];</span><br><span class="line">                    &#125;</span><br><span class="line">                    return aArray1;</span><br><span class="line">                &#125;else if (nM &lt;= -1 &amp;&amp; nM &gt; -this.length) &#123;</span><br><span class="line">                    for (var i = 0; i &lt; (this.length + nM); i++) &#123;</span><br><span class="line">                        aArray1[i] = this[i];</span><br><span class="line">                    &#125;</span><br><span class="line">                    return aArray1;</span><br><span class="line">                &#125;else if (nM &gt; this.length-1) &#123;</span><br><span class="line">                    for (var i = 0; i &lt; this.length; i++) &#123;</span><br><span class="line">                        aArray1[i] = this[i]</span><br><span class="line">                    &#125;</span><br><span class="line">                    return aArray1;</span><br><span class="line">                &#125;</span><br><span class="line">                else &#123;</span><br><span class="line">                    return [];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//测试部分。</span><br><span class="line">var aTest = [0, 1, 2, 3, 4];</span><br><span class="line">var b = [];</span><br><span class="line">for (var i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">    var n = Math.random() * 100 - 50;</span><br><span class="line">    b[i] = n;</span><br><span class="line">&#125;</span><br><span class="line">for (var i = 0; i &lt; b.length; i++) &#123;</span><br><span class="line">    for (var j = 0; j &lt;b.length; j++) &#123;</span><br><span class="line">        console.log(b[i], b[j]);</span><br><span class="line">        console.log(aTest.slice(b[i], b[j]));</span><br><span class="line">        console.log(aTest.mySlice(b[i], b[j]));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//测试一个参数的情况。</span><br><span class="line">// for (var i = 0; i &lt; a.length; i++) &#123;</span><br><span class="line">//         console.log(b[i]);</span><br><span class="line">//         console.log(aTest.slice(b[i]));</span><br><span class="line">//         console.log(aTest.mySlice(b[i]));</span><br><span class="line">// &#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="entry-meta entry-footer">
       
       
-        <div class="post-eof"></div>
+      
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/celery/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-celery"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/28/celery/" itemprop="url">练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/06/28/celery/">练习用原生JavaScript编写与JavaScript数组方法slice功能一样的函数</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T21:01:40+08:00">
-                2017-06-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2017/06/28/celery/" class="article-date">
+	  <time datetime="2017-06-28T13:01:40.000Z" itemprop="datePublished">June 28, 2017</time>
+	</a>
 
       
-        
-          
-            <html>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <html>
 
 <div class="mark_content art_article">
                             <p>鉴于公司项目及业务发展，技术人员从几人到如今几十人，后端团队技术人员日益剧增，可是随着项目人员的增长，大多研发人员及相关人员经常需要到测试环境使用 MySQL 数据库，比如移动端、测试、产品，然而他们需要普及 MySQL 知识点及性能优化的知识，其实性能优化的目标是针对后端研发人员及一些资深的前端人员，可能会从如下大的知识点讲解。</p>
@@ -1718,125 +1049,49 @@ port = 3306
 socket =
                         </p></li></ul></div>
 </html>
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="entry-meta entry-footer">
       
       
-        <div class="post-eof"></div>
+      
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/25/%E4%B8%89%E7%B1%BB%E9%97%AD%E5%8C%85%E5%AE%9E%E4%BE%8B%E7%90%86%E8%A7%A3%E9%97%AD%E5%8C%85%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%8D%A0%E7%94%A8%E5%86%85%E5%AD%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
+<!-- Table of Contents -->
 
     
-      <header class="post-header">
 
+  
+    <article id="post-三类闭包实例理解闭包为什么会占用内存"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/25/%E4%B8%89%E7%B1%BB%E9%97%AD%E5%8C%85%E5%AE%9E%E4%BE%8B%E7%90%86%E8%A7%A3%E9%97%AD%E5%8C%85%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%8D%A0%E7%94%A8%E5%86%85%E5%AD%98/" itemprop="url">三类闭包实例理解闭包为什么会占用内存</a></h1>
-        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/06/25/%E4%B8%89%E7%B1%BB%E9%97%AD%E5%8C%85%E5%AE%9E%E4%BE%8B%E7%90%86%E8%A7%A3%E9%97%AD%E5%8C%85%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%8D%A0%E7%94%A8%E5%86%85%E5%AD%98/">三类闭包实例理解闭包为什么会占用内存</a>
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-25T22:16:54+08:00">
-                2017-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="article-meta">
       
-      
+	Posted on <a href="/2017/06/25/%E4%B8%89%E7%B1%BB%E9%97%AD%E5%8C%85%E5%AE%9E%E4%BE%8B%E7%90%86%E8%A7%A3%E9%97%AD%E5%8C%85%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%8D%A0%E7%94%A8%E5%86%85%E5%AD%98/" class="article-date">
+	  <time datetime="2017-06-25T14:16:54.000Z" itemprop="datePublished">June 25, 2017</time>
+	</a>
 
       
-        
-          
-            <p>在试图弄清这个问题之前，先要理解<a href="https://zhuanyongxigua.github.io/2017/06/25/%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86/" target="_blank" rel="noopener">栈内存、堆内存和预处理</a>。</p>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在试图弄清这个问题之前，先要理解<a href="https://zhuanyongxigua.github.io/2017/06/25/%E6%A0%88%E5%86%85%E5%AD%98%E3%80%81%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86/" target="_blank" rel="noopener">栈内存、堆内存和预处理</a>。</p>
 <h2 id="占用内存，不会销毁的闭包实例"><a href="#占用内存，不会销毁的闭包实例" class="headerlink" title="占用内存，不会销毁的闭包实例"></a>占用内存，不会销毁的闭包实例</h2><h3 id="例1："><a href="#例1：" class="headerlink" title="例1："></a>例1：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var num = 12;</span><br><span class="line">function fn() &#123;</span><br><span class="line">    var num = 100;</span><br><span class="line">    return function () &#123;</span><br><span class="line">        console.log(num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var f = fn();</span><br><span class="line">f();</span><br></pre></td></tr></table></figure>
 
 <p>例1的图示</p>
@@ -1866,481 +1121,376 @@ socket =
 <p>参考资料：</p>
 <p>JavaScript高级程序设计(第三版)。</p>
 
-          
-        
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
+    <footer class="entry-meta entry-footer">
       
       
-        <div class="post-eof"></div>
+      
+            
       
     </footer>
   </div>
   
-  
-  
-  </article>
+</article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/07/%E4%BD%BF%E7%94%A8autohotkey%E4%BF%AE%E6%94%B9%E6%96%B9%E5%90%91%E9%94%AE%E3%80%81%E5%9B%9E%E8%BD%A6%E5%92%8C%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/07/%E4%BD%BF%E7%94%A8autohotkey%E4%BF%AE%E6%94%B9%E6%96%B9%E5%90%91%E9%94%AE%E3%80%81%E5%9B%9E%E8%BD%A6%E5%92%8C%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F/" itemprop="url">使用autohotkey修改方向键、回车和启动程序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-07T21:34:40+08:00">
-                2017-04-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://autohotkey.com/" target="_blank" rel="noopener">autohotkey官网</a></p>
-<p><a href="https://autohotkey.com/docs/AutoHotkey.htm" target="_blank" rel="noopener">autohotkey官方文档</a></p>
-<p><a href="http://ahkcn.sourceforge.net/docs/AutoHotkey.htm" target="_blank" rel="noopener">官方文档中文版</a></p>
-<h3 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h3><ol>
-<li><p>下载并安装autohotkey。</p>
-</li>
-<li><p>在你觉得合适的地方鼠标右键-新建-autohotkey script（脚本）；或者创建一个别的文件，再把后缀改成ahk也可以</p>
-</li>
-<li><p>一个新建的ahk文档里面会有这些东西</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.</span><br><span class="line">; #Warn  ; Enable warnings to assist with detecting common errors.</span><br><span class="line">SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.</span><br><span class="line">SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.</span><br></pre></td></tr></table></figure>
-
-<p>不用管这些</p>
-</li>
-<li><p>在下面输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">!j::</span><br><span class="line">   Send, &#123;Down&#125;</span><br><span class="line">Return</span><br><span class="line"></span><br><span class="line">!l::</span><br><span class="line">   Send, &#123;Right&#125;</span><br><span class="line">Return</span><br><span class="line"></span><br><span class="line">!h::</span><br><span class="line">   Send, &#123;Left&#125;</span><br><span class="line">Return</span><br><span class="line"></span><br><span class="line">!k::</span><br><span class="line">   Send, &#123;Up&#125;</span><br><span class="line">Return</span><br></pre></td></tr></table></figure>
-
-<p>这几句话是把↑改成了alt+k；↓为alt+j；←为alt+h；→为alt+l。如果想用ctrl代替alt，就把<code>!</code> 换成<code>^</code> 。其他的<code>+</code> 代表shift，<code>#</code> 代表windows键，更详细的看<a href="http://ahkcn.sourceforge.net/docs/Hotkeys.htm" target="_blank" rel="noopener">这个</a>。如果不需要其他功能了，直接保存并关闭，跳到第 步。</p>
-</li>
-<li><p><strong>加入修改回车的功能</strong>。键盘左侧的Capslock（锁定大小写）键使用频率相对还是不高的，而回车键的位置又有点坑，改之。直接复制这段这两行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$CapsLock::Enter</span><br><span class="line"></span><br><span class="line">LAlt &amp; Capslock::SetCapsLockState, % GetKeyState(&quot;CapsLock&quot;, &quot;T&quot;) ? &quot;Off&quot; : &quot;On&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这样，左侧的Capslock键就成了回车，以后小量的大写字母用shift+字母，如果有大量的大写字母的输入，用<code>alt+Capslock</code> ，跟之前Capslock是一样的。</p>
-</li>
-<li><p>autohotkey也可以用快捷键启动软件，例如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!o::</span><br><span class="line">   Run, C:\Program Files\Everything\Everything.exe</span><br><span class="line">Return</span><br></pre></td></tr></table></figure>
-
-<p>现在<code>alt+o</code>就是启动everything的快捷键了。同样的，如果想用ctrl代替alt，就把<code>!</code> 换成<code>^</code> 。其他的<code>+</code> 代表shift，<code>#</code> 代表windows键，更详细的看<a href="http://ahkcn.sourceforge.net/docs/Hotkeys.htm" target="_blank" rel="noopener">这个</a>。如果想启动其他的软件，就把上面的路径换成你想启动的那个软件的路径机就可以了。</p>
-</li>
-<li><p>保存，关闭</p>
-</li>
-<li><p>在编辑好的文件点击鼠标右键，选择编译脚本，也可能是Compile script，也可能是Compile脚本，都是一样的。编译之后就会生成一个<code>.exe</code>的文件，把这个文件放到开机启动文件夹中（C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp），每次开机就可以自动启动了。</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
+<!-- Table of Contents -->
 
     
 
+  
+
+
+  <nav id="page-nav">
     
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
   </nav>
 
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
+</section>
+          <aside id="sidebar">
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
+    <div class="widget-wrap" style="margin: 20px 0;">
+	<div id="search-form-wrap">
 
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">John Doe</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/%20%7C%7C%20archive">
-              
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">categories</span>
-                
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
+    <form class="search-form">
+        <label style="width: 75%;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" Search…" value="" name="s" title="Search for:">
+        </label>
+        <input type="submit" class="search-form-submit" value="Search">
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
-      </section>
-
-      
-
-      
-
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
     </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-
-  
 </div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
 
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+</div>
+</div>
+  
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Connect With Us</h3>
+    <div class="widget widget_athemes_social_icons">
+
+    	<ul class="clearfix widget-social-icons">   
+    	
+          
+     			  <li><a href="https://github.com/iTimeTraveler" target="_blank" rel="noopener" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="http://www.yoursite.com" target="_blank" rel="noopener" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+            <li><a href="mailto:?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
+          
+   		
+   		</ul>
+
+
+   		<!--
+   		<ul class="clearfix widget-social-icons">   		
+   		<li class="widget-si-twitter"><a href="http://twitter.com" target="_blank" rel="noopener" title="Twitter"><i class="ico-twitter"></i></a></li> 
+		<li class="widget-si-facebook"><a href="http://facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="ico-facebook"></i></a></li>
+			<li class="widget-si-gplus"><a href="http://plus.google.com" target="_blank" rel="noopener" title="Google+"><i class="ico-gplus"></i></a></li>
+			<li class="widget-si-pinterest"><a href="http://pinterest.com" target="_blank" rel="noopener" title="Pinterest"><i class="ico-pinterest"></i></a></li>
+			<li class="widget-si-flickr"><a href="http://flickr.com" target="_blank" rel="noopener" title="Flickr"><i class="ico-flickr"></i></a></li>
+			<li class="widget-si-instagram"><a href="http://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="ico-instagram"></i></a></li>
+		</ul> -->
+
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>Recent Posts</a></li>
+    </ul>
+    <div class="widget">
+      <ul>
         
-      </div>
-    
+          <li class="clearfix">
 
-    
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
 
+              <h6 style="margin: 0;"><a href="/2019/10/08/redis%E5%85%A8%E8%A7%A3/">redis全解</a></h6>
+              <span>October 8, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2019/06/28/%E6%BB%91%E5%8A%A8%E5%8A%A0%E8%BD%BD/">滑动加载</a></h6>
+              <span>June 28, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/">前端开发最全面试题</a></h6>
+              <span>September 30, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A-2018%E5%B9%B409%E6%9C%88%E7%AC%AC3%E5%91%A8/">前端周刊-2018年09月第3周</a></h6>
+              <span>September 21, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/09/21/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83-used-by-frank/">前端开发规范-used by frank</a></h6>
+              <span>September 21, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2018/09/07/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub-io%E5%8D%9A%E5%AE%A2/">使用hexo搭建github.io博客</a></h6>
+              <span>September 7, 2018</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
   </div>
 
   
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E6%95%99%E7%A8%8B/">Hexo教程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E5%91%A8%E5%88%8A/">前端周刊</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E4%BA%AB/" rel="tag">分享</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag">前端自动化</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 10px;">前端自动化</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2019 Hexo All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 
+<script src="/js/scripts.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 
 
-  
 
 
 
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
 
 
 
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
 
 
 
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  </div>
 
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>
