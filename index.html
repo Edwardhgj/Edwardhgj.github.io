@@ -578,6 +578,91 @@ var themeMenus = {};
     
 
   
+    <article id="post-redis和memcahe区别"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/02/17/redis%E5%92%8Cmemcahe%E5%8C%BA%E5%88%AB/">redis和memcahe区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/02/17/redis%E5%92%8Cmemcahe%E5%8C%BA%E5%88%AB/" class="article-date">
+	  <time datetime="2019-02-17T11:33:11.000Z" itemprop="datePublished">February 17, 2019</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>观点一：</p>
+<p>1、Redis和Memcache都是将数据存放在内存中，都是内存数据库。不过memcache还可用于缓存其他东西，例如图片、视频等等；</p>
+<p>2、Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，hash等数据结构的存储；</p>
+<p>3、虚拟内存-Redis当物理内存用完时，可以将一些很久没用到的value 交换到磁盘；</p>
+<p>4、过期策略–memcache在set时就指定，例如set key1 0 0 8,即永不过期。Redis可以通过例如expire 设定，例如expire name 10；</p>
+<p>5、分布式–设定memcache集群，利用magent做一主多从;redis可以做一主多从。都可以一主一从；</p>
+<p>6、存储数据安全–memcache挂掉后，数据没了；redis可以定期保存到磁盘（持久化）；</p>
+<p>7、灾难恢复,memcache挂掉后，数据不可恢复; </p>
+<p>redis数据丢失后可以通过aof恢复:</p>
+<p>(快照，顾名思义可以理解为拍照一样，把整个内存数据映射到硬盘中，保存一份到硬盘，因此恢复数据起来比较快，把数据映射回去即可，不像AOF，一条条的执行操作命令。产生快照的过程)</p>
+<p>8、Redis支持数据的备份，即master-slave模式的数据备份；</p>
+<p>观点二：</p>
+<p> 如果简单地比较Redis与Memcached的区别，大多数都会得到以下观点：<br>1 Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，hash等数据结构的存储。<br>2 Redis支持数据的备份，即master-slave模式的数据备份。<br>3 Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。</p>
+<p>在Redis中，并不是所有的数据都一直存储在内存中的。这是和Memcached相比一个最大的区别（我个人是这么认为的）。</p>
+<p>Redis 只会缓存所有的key的信息，如果Redis发现内存的使用量超过了某一个阀值，将触发swap的操作，Redis根据“swappability = age*log(size_in_memory)”计算出哪些key对应的value需要swap到磁盘。然后再将这些key对应的value持久化到磁 盘中，同时在内存中清除。这种特性使得Redis可以保持超过其机器本身内存大小的数据。当然，机器本身的内存必须要能够保持所有的key，毕竟这些数据 是不会进行swap操作的。</p>
+<p>同时由于Redis将内存中的数据swap到磁盘中的时候，提供服务的主线程和进行swap操作的子线程会共享这部分内存，所以如果更新需要swap的数据，Redis将阻塞这个操作，直到子线程完成swap操作后才可以进行修改。</p>
+<p>可以参考使用Redis特有内存模型前后的情况对比：</p>
+<p>VM off: 300k keys, 4096 bytes values: 1.3G used<br>VM on: 300k keys, 4096 bytes values: 73M used<br>VM off: 1 million keys, 256 bytes values: 430.12M used<br>VM on: 1 million keys, 256 bytes values: 160.09M used<br>VM on: 1 million keys, values as large as you want, still: 160.09M used </p>
+<p>当 从Redis中读取数据的时候，如果读取的key对应的value不在内存中，那么Redis就需要从swap文件中加载相应数据，然后再返回给请求方。 这里就存在一个I/O线程池的问题。在默认的情况下，Redis会出现阻塞，即完成所有的swap文件加载后才会相应。这种策略在客户端的数量较小，进行 批量操作的时候比较合适。但是如果将Redis应用在一个大型的网站应用程序中，这显然是无法满足大并发的情况的。所以Redis运行我们设置I/O线程 池的大小，对需要从swap文件中加载相应数据的读取请求进行并发操作，减少阻塞的时间。</p>
+<p>redis、memcache、mongoDB 对比<br>从以下几个维度，对redis、memcache、mongoDB 做了对比，欢迎拍砖</p>
+<p>1、性能<br>都比较高，性能对我们来说应该都不是瓶颈<br>总体来讲，TPS方面redis和memcache差不多，要大于mongodb</p>
+<p>2、操作的便利性<br>memcache数据结构单一<br>redis丰富一些，数据操作方面，redis更好一些，较少的网络IO次数<br>mongodb支持丰富的数据表达，索引，最类似关系型数据库，支持的查询语言非常丰富</p>
+<p>3、内存空间的大小和数据量的大小<br>redis在2.0版本后增加了自己的VM特性，突破物理内存的限制；可以对key value设置过期时间（类似memcache）<br>memcache可以修改最大可用内存,采用LRU算法<br>mongoDB适合大数据量的存储，依赖操作系统VM做内存管理，吃内存也比较厉害，服务不要和别的服务在一起</p>
+<p>4、可用性（单点问题）</p>
+<p>对于单点问题，<br>redis，依赖客户端来实现分布式读写；主从复制时，每次从节点重新连接主节点都要依赖整个快照,无增量复制，因性能和效率问题，<br>所以单点问题比较复杂；不支持自动sharding,需要依赖程序设定一致hash 机制。<br>一种替代方案是，不用redis本身的复制机制，采用自己做主动复制（多份存储），或者改成增量复制的方式（需要自己实现），一致性问题和性能的权衡</p>
+<p>Memcache本身没有数据冗余机制，也没必要；对于故障预防，采用依赖成熟的hash或者环状的算法，解决单点故障引起的抖动问题。</p>
+<p>mongoDB支持master-slave,replicaset（内部采用paxos选举算法，自动故障恢复）,auto sharding机制，对客户端屏蔽了故障转移和切分机制。</p>
+<p>5、可靠性（持久化）</p>
+<p>对于数据持久化和数据恢复，</p>
+<p>redis支持（快照、AOF）：依赖快照进行持久化，aof增强了可靠性的同时，对性能有所影响</p>
+<p>memcache不支持，通常用在做缓存,提升性能；</p>
+<p>MongoDB从1.8版本开始采用binlog方式支持持久化的可靠性</p>
+<p>6、数据一致性（事务支持）</p>
+<p>Memcache 在并发场景下，用cas保证一致性</p>
+<p>redis事务支持比较弱，只能保证事务中的每个操作连续执行</p>
+<p>mongoDB不支持事务</p>
+<p>7、数据分析</p>
+<p>mongoDB内置了数据分析的功能(mapreduce),其他不支持</p>
+<p>8、应用场景<br>redis：数据量较小的更性能操作和运算上</p>
+<p>memcache：用于在动态系统中减少数据库负载，提升性能;做缓存，提高性能（适合读多写少，对于数据量比较大，可以采用sharding）</p>
+<p>MongoDB:主要解决海量数据的访问效率问题  </p>
+<p><strong>需要慎重考虑的部分</strong><br>1.Memcached单个key-value大小有限，一个value最大只支持1MB，而Redis最大支持512MB<br>2.Memcached只是个内存缓存，对可靠性无要求；而Redis更倾向于内存数据库，因此对对可靠性方面要求比较高<br>3.从本质上讲，Memcached只是一个单一key-value内存Cache；而Redis则是一个数据结构内存数据库，支持五种数据类型，因此Redis除单纯缓存作用外，还可以处理一些简单的逻辑运算，Redis不仅可以缓存，而且还可以作为数据库用<br>4.新版本（3.0）的Redis是指集群分布式，也就是说集群本身均衡客户端请求，各个节点可以交流，可拓展行、可维护性更强大。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
     <article id="post-redis全解"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -1392,89 +1477,6 @@ var themeMenus = {};
     
 
   
-    <article id="post-git 自己的总结"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2018/08/28/git%20%E8%87%AA%E5%B7%B1%E7%9A%84%E6%80%BB%E7%BB%93/">git总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2018/08/28/git%20%E8%87%AA%E5%B7%B1%E7%9A%84%E6%80%BB%E7%BB%93/" class="article-date">
-	  <time datetime="2018-08-28T13:01:40.000Z" itemprop="datePublished">August 28, 2018</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1先在码云官网创建自己的项目"><a href="#1先在码云官网创建自己的项目" class="headerlink" title="1先在码云官网创建自己的项目"></a>1先在码云官网创建自己的项目</h3><p>略</p>
-<h3 id="2在桌面-拉去远端码云项目到本地"><a href="#2在桌面-拉去远端码云项目到本地" class="headerlink" title="2在桌面 拉去远端码云项目到本地:"></a>2在桌面 拉去远端码云项目到本地:</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http<span class="variable">s:</span>//gitee.<span class="keyword">com</span>/edward_h/OnlineEducation.git</span><br></pre></td></tr></table></figure>
-
-<h3 id="3新建分支-并关联远程分支方便以后上传项目文件-注意-有些个性化配置需要上传-比如vue项目的-node-modules"><a href="#3新建分支-并关联远程分支方便以后上传项目文件-注意-有些个性化配置需要上传-比如vue项目的-node-modules" class="headerlink" title="3新建分支,并关联远程分支方便以后上传项目文件,注意 有些个性化配置需要上传,比如vue项目的 node_modules"></a>3新建分支,并关联远程分支方便以后上传项目文件,注意 有些个性化配置需要上传,比如vue项目的 node_modules</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev    # 创建分支并切换到该分支</span><br></pre></td></tr></table></figure>
-
-<h3 id="切换分支-（dev是分支名"><a href="#切换分支-（dev是分支名" class="headerlink" title="切换分支   （dev是分支名)"></a>切换分支   （dev是分支名)</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev    # 切换分支   （dev是分支名)  #这步不用建立分支了</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-创建远程分支连接-此处为master分支"><a href="#4-创建远程分支连接-此处为master分支" class="headerlink" title="4.创建远程分支连接(此处为master分支)"></a>4.创建远程分支连接(此处为master分支)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch --set-upstream-to=origin/master</span><br></pre></td></tr></table></figure>
-
-<p>如果提示错误,则说明远程没有该分支,则需要创建该远程分支</p>
-<p>创建完毕后,再执行4操作,关联远程分支</p>
-<h3 id="5-执行添加项目操作-这两步操作必须同时存在"><a href="#5-执行添加项目操作-这两步操作必须同时存在" class="headerlink" title="5.执行添加项目操作,这两步操作必须同时存在"></a>5.执行添加项目操作,这两步操作必须同时存在</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span> -A 文件名   :添加修改文件 </span><br><span class="line"></span><br><span class="line">git commit -<span class="keyword">m</span> <span class="string">"提交的信息"</span>  将文件存进暂存区</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-此处拉下文件如果提示冲突-则解决完冲突-再次执行第五步操作-因为修改了冲突的代码-所以重新将代码添加到暂存区"><a href="#6-此处拉下文件如果提示冲突-则解决完冲突-再次执行第五步操作-因为修改了冲突的代码-所以重新将代码添加到暂存区" class="headerlink" title="6.此处拉下文件如果提示冲突,则解决完冲突,再次执行第五步操作,因为修改了冲突的代码,所以重新将代码添加到暂存区"></a>6.此处拉下文件如果提示冲突,则解决完冲突,再次执行第五步操作,因为修改了冲突的代码,所以重新将代码添加到暂存区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull     # 下拉最新文件</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">add</span>  文件名    </span><br><span class="line">git <span class="built_in">add</span> -A 提交所有修改</span><br><span class="line"></span><br><span class="line">git commit -<span class="keyword">m</span> <span class="string">"提交的信息"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="7-直到不显示冲突则说明解决完冲突了-再提交"><a href="#7-直到不显示冲突则说明解决完冲突了-再提交" class="headerlink" title="7.直到不显示冲突则说明解决完冲突了,再提交"></a>7.直到不显示冲突则说明解决完冲突了,再提交</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push    # 上传文件</span><br></pre></td></tr></table></figure>
-
-<p>不提示错误,则上传完毕</p>
-<h3 id="8-可以查看上一次的修改操作是什么"><a href="#8-可以查看上一次的修改操作是什么" class="headerlink" title="8.可以查看上一次的修改操作是什么"></a>8.可以查看上一次的修改操作是什么</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="备用知识点-建项目着-如果想让其他人通过输入账号密码才能上传文件-则输入如下命令-这些命令用不到"><a href="#备用知识点-建项目着-如果想让其他人通过输入账号密码才能上传文件-则输入如下命令-这些命令用不到" class="headerlink" title="备用知识点 建项目着 如果想让其他人通过输入账号密码才能上传文件 则输入如下命令  (这些命令用不到)"></a>备用知识点 建项目着 如果想让其他人通过输入账号密码才能上传文件 则输入如下命令  (这些命令用不到)</h3><p>插入如下代码使项目中的组员每次修改数据都要输入账号和密码：</p>
-<ul>
-<li>git config –global user.name [username]</li>
-<li>git config –global user.password [userpassword]</li>
-<li>PS：想要保存密码，则需要插入如下代码： git config –global credential.helper store。</li>
-</ul>
-<p>###gitee推送到远程仓库时提示错误</p>
-<p>remote: Incorrect username or password ( access token )</p>
-<p>fatal: Authentication failed for ‘<a href="https://gitee.com/***/***.git/&#39;" target="_blank" rel="noopener">https://gitee.com/***/***.git/&#39;</a></p>
-<p>解决办法：清除本地的gitee用户名和密码</p>
-<p>git config –system –unset credential.helper</p>
-<p>再执行推送，重新输入用户名和密码。</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-    
-
-  
 
 
   <nav id="page-nav">
@@ -1651,8 +1653,8 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2018/10/25/redis%E5%85%A8%E8%A7%A3/">Redis</a></h6>
-              <span>October 25, 2018</span>
+              <h6 style="margin: 0;"><a href="/2019/02/17/redis%E5%92%8Cmemcahe%E5%8C%BA%E5%88%AB/">redis和memcahe区别</a></h6>
+              <span>February 17, 2019</span>
             </div>
 
           </li>
@@ -1663,8 +1665,8 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2018/09/30/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%9C%80%E5%85%A8%E9%9D%A2%E8%AF%95%E9%A2%98/">前端开发最全面试题</a></h6>
-              <span>September 30, 2018</span>
+              <h6 style="margin: 0;"><a href="/2018/10/25/redis%E5%85%A8%E8%A7%A3/">Redis</a></h6>
+              <span>October 25, 2018</span>
             </div>
 
           </li>
@@ -1708,7 +1710,7 @@ var themeMenus = {};
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
