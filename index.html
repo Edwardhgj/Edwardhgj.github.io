@@ -162,185 +162,6 @@ var themeMenus = {};
         
           <section id="main">
   
-    <article id="post-并发和并行"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/11/17/%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/">并发和并行</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2019/11/17/%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/" class="article-date">
-	  <time datetime="2019-11-17T11:40:50.000Z" itemprop="datePublished">November 17, 2019</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>所有的并发处理都有排队等候，唤醒，执行至少三个这样的步骤.所以并发肯定是宏观概念，在微观上他们都是序列被处理的，只不过资源不会在某一个上被阻塞(一般是通过时间片轮转)，所以在宏观上看多个几乎同时到达的请求同时在被处理。如果是同一时刻到达的请求也会根据优先级的不同，而先后进入队列排队等候执行。</p>
-<p>  并发与并行是两个既相似而又不相同的概念：并发性，又称共行性，是指能处理多个同时性活动的能力；并行是指同时发生的两个并发事件，具有并发的含义，而并发则不一定并行，也亦是说并发事件之间不一定要同一时刻发生。</p>
-<p>并发的实质是一个物理CPU(也可以多个物理CPU) 在若干道程序之间多路复用，并发性是对有限物理资源强制行使多用户共享以提高效率。</p>
-<p>并行性指两个或两个以上事件或活动在同一时刻发生。在多道程序环境下，并行性使多个程序同一时刻可在不同CPU上同时执行。</p>
-<p> <a href="162405567.jpg">!img</a></p>
-<p>并发，是在同一个cpu上同时（不是真正的同时，而是看来是同时，因为cpu要在多个程序间切换）运行多个程序。</p>
-<p> <a href="162405177.jpg">!img</a></p>
-<p>并行，是每个cpu运行一个程序。</p>
-<p>打个比方。并发，就像一个人（cpu）喂2个孩子（程序），轮换着每人喂一口，表面上两个孩子都在吃饭。并行，就是2个人喂2个孩子，两个孩子也同时在吃饭。</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-    
-
-  
-    <article id="post-禅道bug管理系统"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/11/07/%E7%A6%85%E9%81%93bug%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">禅道bug管理系统</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2019/11/07/%E7%A6%85%E9%81%93bug%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="article-date">
-	  <time datetime="2019-11-07T08:16:19.816Z" itemprop="datePublished">November 7, 2019</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="禅道项目管理软件配置及使用教程"><a href="#禅道项目管理软件配置及使用教程" class="headerlink" title="禅道项目管理软件配置及使用教程"></a>禅道项目管理软件配置及使用教程</h1><h1 id="一．禅道安装及运行"><a href="#一．禅道安装及运行" class="headerlink" title="一．禅道安装及运行"></a><strong>一．禅道安装及运行</strong></h1><p>禅道是一款开源项目管理软件。它集产品管理、项目管理、质量管理、文档管理、组织管理和事务管理于一体，是一款专业的研发项目管理软件，完整覆盖了研发项目管理的核心流程。</p>
-<p>禅道将产品、项目、测试这三者的概念明确分开，产品人员、开发团队、测试人员，这三者分立，互相配合，又互相制约，通过需求、任务、bug来进行交相互动，最终通过项目拿到合格的产品。</p>
-<p>1.禅道下载：Linux中可以用以下命令来下载安装包：</p>
-<p>64位下载：wget <a href="http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz" target="_blank" rel="noopener">http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz</a></p>
-<p>2.Linux安装需要将安装包解压到/opt目录下。</p>
-<p>命令如下：sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/</p>
-<p>解压后会在/opt下找到一个zbox目录，这就是禅道的安装目录。</p>
-<p>通过命令进入 cd /opt/zbox/  就可以看到已经安装好的目录结构。</p>
-<p>3.启动禅道：在/opt/zbox目录下通过./zbox start命令就可以启动Apache和MySQL</p>
-<p> <img src="https://img-blog.csdn.net/2018053017255210?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>4.在浏览器中访问： IP地址 登陆禅道</p>
-<p> <img src="https://img-blog.csdn.net/20180530172625538?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<h1 id="二．禅道组成结构"><a href="#二．禅道组成结构" class="headerlink" title="二．禅道组成结构"></a>二．<strong>禅道组成结构</strong></h1><p> <img src="https://img-blog.csdn.net/2018053017264347?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>管理员admin功能：添加账号 维护账号 权限管理</p>
-<p> <img src="https://img-blog.csdn.net/20180530172657930?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<h1 id="三．禅道基本使用流程"><a href="#三．禅道基本使用流程" class="headerlink" title="三．禅道基本使用流程"></a>三．<strong>禅道基本使用流程</strong></h1><p>禅道管理软件中，核心的三种角色：产品、研发和测试，这三者之间通过需求进行协作，实现了研发管理中的三权分立。其中产品经理整理需求，研发团队实现任务，测试团队则保障质量，其三者的关系如下图：</p>
-<p> <img src="https://img-blog.csdn.net/2018053017271016?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p><strong>基本流程如下：</strong></p>
-<p>\1. 产品经理创建产品</p>
-<p>\2. 产品经理在产品下创建需求</p>
-<p>\3. 项目经理创建项目</p>
-<p>\4. 项目经理确定项目要做的需求和任务</p>
-<p>\5. 项目经理分解任务，指派到研发人员。</p>
-<p>\6. 测试人员测试，提交bug。</p>
-<h1 id="四．产品管理功能"><a href="#四．产品管理功能" class="headerlink" title="四．产品管理功能"></a>四．<strong>产品管理功能</strong></h1><p>禅道中的需求依附在产品下，新增产品以后才可以新增需求</p>
-<p>然后在新增的产品下提需求和计划，可将产品分解为子模块A、模块B、模块C…</p>
-<p>在提需求时针对该需求选择所属模块：</p>
-<p> <img src="https://img-blog.csdn.net/20180530172732875?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p> <img src="https://img-blog.csdn.net/20180530172747203?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>禅道专门提供了需求的变更流程。凡是对需求标题、描述、验证标准和附件的修改，都应该走变更流程。</p>
-<p>可以查看需求变更之前的变化：</p>
-<p> <img src="https://img-blog.csdn.net/20180530172803782?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>产品人员在动态一栏中可以看到该产品的全部变更过程：</p>
-<p> <img src="https://img-blog.csdn.net/20180530172816212?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>由提需求时指定的评审人员评审需求，给出评审结果</p>
-<p> <img src="https://img-blog.csdn.net/2018053017282920?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>评审人员确认需求通过后，需求状态改为激活，否则为草稿：</p>
-<p> <img src="https://img-blog.csdn.net/20180530172839210?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>产品的需求可以导出文件或生成报表</p>
-<p><img src="https://img-blog.csdn.net/20180530172850559?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
-<p>新增产品–&gt;提需求–&gt;审核通过</p>
-<p>新增产品–&gt;提需求–&gt;审核不通过–&gt;变更需求</p>
-<h1 id="五．项目功能管理"><a href="#五．项目功能管理" class="headerlink" title="五．项目功能管理"></a>五．<strong>项目功能管理</strong></h1><p>\1. 项目经理进入项目视图，添加项目</p>
-<p> <img src="https://img-blog.csdn.net/20180530172907210?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>项目关联产品，即可选择关联该产品对应的某些需求</p>
-<p><img src="https://img-blog.csdn.net/20180530172920115?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>再为关联的需求分解任务，指派给某个人</p>
-<p> <img src="https://img-blog.csdn.net/20180530172934519?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>\2. 保存项目时，设置团队</p>
-<p><img src="https://img-blog.csdn.net/20180530172944904?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
-<p>需要选择是哪些成员可以参与到这个项目中，同时需要设置这个成员在本项目中的角色。</p>
-<p> <img src="https://img-blog.csdn.net/20180530172955288?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>\3. 在已建立好的项目下创建任务，将任务或关联的需求分解指派给项目组成员<strong><em>\</em>（任务类型务必准确选择）**</strong></p>
-<p> <img src="https://img-blog.csdn.net/20180530173008138?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
-<p>\4. 项目成员登录时，即可查看到分配给他的任务，成员只需要更新任务状态即可</p>
-<p> <img src="https://img-blog.csdn.net/20180530173021906?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>可为项目关联的产品创建不同版本，并分别提交测试（提交源代码或附件）：</p>
-<p><img src="https://img-blog.csdn.net/20180530173030253?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
-<p>可以按各种属性查看到项目的状态及完成进度（下图为按任务类型查看）：</p>
-<p><img src="https://img-blog.csdn.net/2018053017304861?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
-<p>成员可按照不同属性查看项目中任务状态：</p>
-<p> <img src="https://img-blog.csdn.net/20180530173104696?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>添加项目–&gt;关联产品–&gt;关联需求–&gt;设置团队–&gt;分解任务到团队成员–&gt;成员修改状态</p>
-<p>添加项目–&gt;建任务–&gt;设置团队–&gt;分解任务到团队成员–&gt;成员修改状态</p>
-<h1 id="六．Bug-管理"><a href="#六．Bug-管理" class="headerlink" title="六．Bug\管理****"></a>六．<strong>Bug\</strong>管理****</h1><p>禅道里面设计的理念是bug主要附属在产品概念下面，有对应产品以后才可以开始提bug。默认Bug的严重程度分为四级，优先级分为五级（管理员可进行自定义）。</p>
-<p><img src="https://img-blog.csdn.net/20180530173117482?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p><strong><em>\</em>禅道里面缺陷处理的基本流程是：测试提交\</strong>bug =&gt; *<em>开发解决*</em>*<em>bug =&gt;*</em> *<em>测试验证*</em>*<em>bug =&gt;*</em> *<em>测试关闭*</em>*<em>bu*</em>g；**</p>
-<p><strong><em>\</em>如果\</strong>bug*<em>验证没有通过，可以激活：测试提交*</em>*<em>bug =&gt;*</em> *<em>开发解决*</em>*<em>bug =&gt;*</em> *<em>测试验证*</em>*<em>bug =&gt;*</em> *<em>测试激活*</em>*<em>bug =&gt;*</em> *<em>开发解决*</em>*<em>bug =&gt;*</em> *<em>测试验证*</em> *<em>=&gt;*</em> *<em>测试关闭。***</em></p>
-<p>在创建bug的时候，必填的字段是：影响版本，bug标题，重现步骤，所属模块。</p>
-<p>创建bug的时候，可以直接指派给某一个研发人员去处理，他可以来验证解决这个bug。</p>
-<p> <img src="https://img-blog.csdn.net/2018053017313099?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p> <img src="https://img-blog.csdn.net/20180530173140131?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>当研发人员解决了bug之后，bug会重新指派到bug的创建者头上。这时候测试人员可以来验证这个bug是否已经修复。如果验证通过，则可以关闭该bug。</p>
-<p>新增测试用例：</p>
-<p> <img src="https://img-blog.csdn.net/20180530173153744?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p><img src="https://img-blog.csdn.net/20180530173209123?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>B：是Bug的缩写，指该用例产生的Bug数。</p>
-<p>R：是指该用例执行的结果数。</p>
-<p>S：是指该用例的步骤数。</p>
-<p>产品版本分为待测版本和已测版本，可分别关联测试用例：</p>
-<p> <img src="https://img-blog.csdn.net/20180530173222399?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
-<p>测试用例运行失败可以直接保存为bug，指派给某研发人员进行调试。测试部分的用例和bug都可以自动导出为文档。</p>
-<h1 id="七．文档管理"><a href="#七．文档管理" class="headerlink" title="七．文档管理"></a>七．<strong>文档管理</strong></h1><p>模板项目中有文档分类的模板，添加文档时可以此为参考（创建文档时不要忘记选择所属分类）</p>
-<p><img src="https://img-blog.csdn.net/20180530173241698?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-    
-
-  
     <article id="post-阿里云利用docker安装 RabbitMQ"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -409,6 +230,58 @@ var themeMenus = {};
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --name redis-1 -v /root/redis.conf:/usr/local/etc/redis/redis.conf -d -p 6379:6379 redis /bin/bash</span><br><span class="line"># 容器成功启动后，会打印一个长串的容器ID</span><br></pre></td></tr></table></figure>
 
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-并发和并行"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/09/17/%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/">并发和并行</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/09/17/%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/" class="article-date">
+	  <time datetime="2019-09-17T11:40:50.000Z" itemprop="datePublished">September 17, 2019</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>所有的并发处理都有排队等候，唤醒，执行至少三个这样的步骤.所以并发肯定是宏观概念，在微观上他们都是序列被处理的，只不过资源不会在某一个上被阻塞(一般是通过时间片轮转)，所以在宏观上看多个几乎同时到达的请求同时在被处理。如果是同一时刻到达的请求也会根据优先级的不同，而先后进入队列排队等候执行。</p>
+<p>  并发与并行是两个既相似而又不相同的概念：并发性，又称共行性，是指能处理多个同时性活动的能力；并行是指同时发生的两个并发事件，具有并发的含义，而并发则不一定并行，也亦是说并发事件之间不一定要同一时刻发生。</p>
+<p>并发的实质是一个物理CPU(也可以多个物理CPU) 在若干道程序之间多路复用，并发性是对有限物理资源强制行使多用户共享以提高效率。</p>
+<p>并行性指两个或两个以上事件或活动在同一时刻发生。在多道程序环境下，并行性使多个程序同一时刻可在不同CPU上同时执行。</p>
+<p> <a href="162405567.jpg">!img</a></p>
+<p>并发，是在同一个cpu上同时（不是真正的同时，而是看来是同时，因为cpu要在多个程序间切换）运行多个程序。</p>
+<p> <a href="162405177.jpg">!img</a></p>
+<p>并行，是每个cpu运行一个程序。</p>
+<p>打个比方。并发，就像一个人（cpu）喂2个孩子（程序），轮换着每人喂一口，表面上两个孩子都在吃饭。并行，就是2个人喂2个孩子，两个孩子也同时在吃饭。</p>
 
       
     </div>
@@ -611,6 +484,133 @@ var themeMenus = {};
 <p>通过下图可以清晰地看到两种设计模式的不同点。<br><img src="1623.png" alt="img"></p>
 <p>发布/订阅者模式与观察者模式主要有以下几个不同点：</p>
 <p>在观察者模式中，主体维护观察者列表，因此主体知道当状态发生变化时如何通知观察者。然而，在发布者/订阅者中，发布者和订阅者不需要相互了解。它们只需在中间层消息代理（或消息队列）的帮助下进行通信。<br>在发布者/订阅者模式中，组件与观察者模式完全分离。在观察者模式中，主题和观察者松散耦合。<br>观察者模式主要是以同步方式实现的，即当发生某些事件时，主题调用其所有观察者的适当方法。发布服务器/订阅服务器模式主要以异步方式实现（使用消息队列）。<br>发布者/订阅者模式更像是一种跨应用程序模式。发布服务器和订阅服务器可以驻留在两个不同的应用程序中。它们中的每一个都通过消息代理或消息队列进行通信。<br><img src="1624.png" alt="img"><br>本文介绍了发布者/订阅者模式的相关概念，后面几篇会详细介绍具体实现。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
+    <article id="post-禅道bug管理系统"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/03/17/%E7%A6%85%E9%81%93bug%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">禅道项目管理软件配置及使用教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/03/17/%E7%A6%85%E9%81%93bug%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="article-date">
+	  <time datetime="2019-03-17T11:40:50.000Z" itemprop="datePublished">March 17, 2019</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一．禅道安装及运行"><a href="#一．禅道安装及运行" class="headerlink" title="一．禅道安装及运行"></a><strong>一．禅道安装及运行</strong></h1><p>禅道是一款开源项目管理软件。它集产品管理、项目管理、质量管理、文档管理、组织管理和事务管理于一体，是一款专业的研发项目管理软件，完整覆盖了研发项目管理的核心流程。</p>
+<p>禅道将产品、项目、测试这三者的概念明确分开，产品人员、开发团队、测试人员，这三者分立，互相配合，又互相制约，通过需求、任务、bug来进行交相互动，最终通过项目拿到合格的产品。</p>
+<p>1.禅道下载：Linux中可以用以下命令来下载安装包：</p>
+<p>64位下载：wget <a href="http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz" target="_blank" rel="noopener">http://dl.cnezsoft.com/zentao/9.0.1/ZenTaoPMS.9.0.1.zbox_64.tar.gz</a></p>
+<p>2.Linux安装需要将安装包解压到/opt目录下。</p>
+<p>命令如下：sudo tar -zxvf ZenTaoPMS.9.0.1.zbox_64.tar.gz -C /opt/</p>
+<p>解压后会在/opt下找到一个zbox目录，这就是禅道的安装目录。</p>
+<p>通过命令进入 cd /opt/zbox/  就可以看到已经安装好的目录结构。</p>
+<p>3.启动禅道：在/opt/zbox目录下通过./zbox start命令就可以启动Apache和MySQL</p>
+<p> <img src="https://img-blog.csdn.net/2018053017255210?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>4.在浏览器中访问： IP地址 登陆禅道</p>
+<p> <img src="https://img-blog.csdn.net/20180530172625538?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<h1 id="二．禅道组成结构"><a href="#二．禅道组成结构" class="headerlink" title="二．禅道组成结构"></a>二．<strong>禅道组成结构</strong></h1><p> <img src="https://img-blog.csdn.net/2018053017264347?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>管理员admin功能：添加账号 维护账号 权限管理</p>
+<p> <img src="https://img-blog.csdn.net/20180530172657930?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<h1 id="三．禅道基本使用流程"><a href="#三．禅道基本使用流程" class="headerlink" title="三．禅道基本使用流程"></a>三．<strong>禅道基本使用流程</strong></h1><p>禅道管理软件中，核心的三种角色：产品、研发和测试，这三者之间通过需求进行协作，实现了研发管理中的三权分立。其中产品经理整理需求，研发团队实现任务，测试团队则保障质量，其三者的关系如下图：</p>
+<p> <img src="https://img-blog.csdn.net/2018053017271016?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><strong>基本流程如下：</strong></p>
+<p>\1. 产品经理创建产品</p>
+<p>\2. 产品经理在产品下创建需求</p>
+<p>\3. 项目经理创建项目</p>
+<p>\4. 项目经理确定项目要做的需求和任务</p>
+<p>\5. 项目经理分解任务，指派到研发人员。</p>
+<p>\6. 测试人员测试，提交bug。</p>
+<h1 id="四．产品管理功能"><a href="#四．产品管理功能" class="headerlink" title="四．产品管理功能"></a>四．<strong>产品管理功能</strong></h1><p>禅道中的需求依附在产品下，新增产品以后才可以新增需求</p>
+<p>然后在新增的产品下提需求和计划，可将产品分解为子模块A、模块B、模块C…</p>
+<p>在提需求时针对该需求选择所属模块：</p>
+<p> <img src="https://img-blog.csdn.net/20180530172732875?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p> <img src="https://img-blog.csdn.net/20180530172747203?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>禅道专门提供了需求的变更流程。凡是对需求标题、描述、验证标准和附件的修改，都应该走变更流程。</p>
+<p>可以查看需求变更之前的变化：</p>
+<p> <img src="https://img-blog.csdn.net/20180530172803782?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>产品人员在动态一栏中可以看到该产品的全部变更过程：</p>
+<p> <img src="https://img-blog.csdn.net/20180530172816212?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>由提需求时指定的评审人员评审需求，给出评审结果</p>
+<p> <img src="https://img-blog.csdn.net/2018053017282920?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>评审人员确认需求通过后，需求状态改为激活，否则为草稿：</p>
+<p> <img src="https://img-blog.csdn.net/20180530172839210?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>产品的需求可以导出文件或生成报表</p>
+<p><img src="https://img-blog.csdn.net/20180530172850559?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
+<p>新增产品–&gt;提需求–&gt;审核通过</p>
+<p>新增产品–&gt;提需求–&gt;审核不通过–&gt;变更需求</p>
+<h1 id="五．项目功能管理"><a href="#五．项目功能管理" class="headerlink" title="五．项目功能管理"></a>五．<strong>项目功能管理</strong></h1><p>\1. 项目经理进入项目视图，添加项目</p>
+<p> <img src="https://img-blog.csdn.net/20180530172907210?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>项目关联产品，即可选择关联该产品对应的某些需求</p>
+<p><img src="https://img-blog.csdn.net/20180530172920115?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>再为关联的需求分解任务，指派给某个人</p>
+<p> <img src="https://img-blog.csdn.net/20180530172934519?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>\2. 保存项目时，设置团队</p>
+<p><img src="https://img-blog.csdn.net/20180530172944904?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
+<p>需要选择是哪些成员可以参与到这个项目中，同时需要设置这个成员在本项目中的角色。</p>
+<p> <img src="https://img-blog.csdn.net/20180530172955288?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>\3. 在已建立好的项目下创建任务，将任务或关联的需求分解指派给项目组成员<strong><em>\</em>（任务类型务必准确选择）**</strong></p>
+<p> <img src="https://img-blog.csdn.net/20180530173008138?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
+<p>\4. 项目成员登录时，即可查看到分配给他的任务，成员只需要更新任务状态即可</p>
+<p> <img src="https://img-blog.csdn.net/20180530173021906?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>可为项目关联的产品创建不同版本，并分别提交测试（提交源代码或附件）：</p>
+<p><img src="https://img-blog.csdn.net/20180530173030253?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
+<p>可以按各种属性查看到项目的状态及完成进度（下图为按任务类型查看）：</p>
+<p><img src="https://img-blog.csdn.net/2018053017304861?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
+<p>成员可按照不同属性查看项目中任务状态：</p>
+<p> <img src="https://img-blog.csdn.net/20180530173104696?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>添加项目–&gt;关联产品–&gt;关联需求–&gt;设置团队–&gt;分解任务到团队成员–&gt;成员修改状态</p>
+<p>添加项目–&gt;建任务–&gt;设置团队–&gt;分解任务到团队成员–&gt;成员修改状态</p>
+<h1 id="六．Bug-管理"><a href="#六．Bug-管理" class="headerlink" title="六．Bug\管理****"></a>六．<strong>Bug\</strong>管理****</h1><p>禅道里面设计的理念是bug主要附属在产品概念下面，有对应产品以后才可以开始提bug。默认Bug的严重程度分为四级，优先级分为五级（管理员可进行自定义）。</p>
+<p><img src="https://img-blog.csdn.net/20180530173117482?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><strong><em>\</em>禅道里面缺陷处理的基本流程是：测试提交\</strong>bug =&gt; *<em>开发解决*</em>*<em>bug =&gt;*</em> *<em>测试验证*</em>*<em>bug =&gt;*</em> *<em>测试关闭*</em>*<em>bu*</em>g；**</p>
+<p><strong><em>\</em>如果\</strong>bug*<em>验证没有通过，可以激活：测试提交*</em>*<em>bug =&gt;*</em> *<em>开发解决*</em>*<em>bug =&gt;*</em> *<em>测试验证*</em>*<em>bug =&gt;*</em> *<em>测试激活*</em>*<em>bug =&gt;*</em> *<em>开发解决*</em>*<em>bug =&gt;*</em> *<em>测试验证*</em> *<em>=&gt;*</em> *<em>测试关闭。***</em></p>
+<p>在创建bug的时候，必填的字段是：影响版本，bug标题，重现步骤，所属模块。</p>
+<p>创建bug的时候，可以直接指派给某一个研发人员去处理，他可以来验证解决这个bug。</p>
+<p> <img src="https://img-blog.csdn.net/2018053017313099?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p> <img src="https://img-blog.csdn.net/20180530173140131?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>当研发人员解决了bug之后，bug会重新指派到bug的创建者头上。这时候测试人员可以来验证这个bug是否已经修复。如果验证通过，则可以关闭该bug。</p>
+<p>新增测试用例：</p>
+<p> <img src="https://img-blog.csdn.net/20180530173153744?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="https://img-blog.csdn.net/20180530173209123?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>B：是Bug的缩写，指该用例产生的Bug数。</p>
+<p>R：是指该用例执行的结果数。</p>
+<p>S：是指该用例的步骤数。</p>
+<p>产品版本分为待测版本和已测版本，可分别关联测试用例：</p>
+<p> <img src="https://img-blog.csdn.net/20180530173222399?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>测试用例运行失败可以直接保存为bug，指派给某研发人员进行调试。测试部分的用例和bug都可以自动导出为文档。</p>
+<h1 id="七．文档管理"><a href="#七．文档管理" class="headerlink" title="七．文档管理"></a>七．<strong>文档管理</strong></h1><p>模板项目中有文档分类的模板，添加文档时可以此为参考（创建文档时不要忘记选择所属分类）</p>
+<p><img src="https://img-blog.csdn.net/20180530173241698?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpbmF0XzIwMzUwNDc5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"> </p>
 
       
     </div>
@@ -1563,32 +1563,20 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2019/11/17/%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/">并发和并行</a></h6>
-              <span>November 17, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/11/07/%E7%A6%85%E9%81%93bug%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">禅道bug管理系统</a></h6>
-              <span>November 7, 2019</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
               <h6 style="margin: 0;"><a href="/2019/10/10/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%A9%E7%94%A8docker%E5%AE%89%E8%A3%85%20RabbitMQ/">阿里云利用docker安装 RabbitMQ</a></h6>
               <span>October 10, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2019/09/17/%E5%B9%B6%E5%8F%91%E5%92%8C%E5%B9%B6%E8%A1%8C/">并发和并行</a></h6>
+              <span>September 17, 2019</span>
             </div>
 
           </li>
@@ -1613,6 +1601,18 @@ var themeMenus = {};
 
               <h6 style="margin: 0;"><a href="/2019/04/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F-%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/">单例模式,工厂模式,发布订阅模式</a></h6>
               <span>April 17, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2019/03/17/%E7%A6%85%E9%81%93bug%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">禅道项目管理软件配置及使用教程</a></h6>
+              <span>March 17, 2019</span>
             </div>
 
           </li>
@@ -1668,7 +1668,7 @@ var themeMenus = {};
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
