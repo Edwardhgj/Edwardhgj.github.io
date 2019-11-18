@@ -162,6 +162,208 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-恩泽面试题"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/11/18/%E6%81%A9%E6%B3%BD%E9%9D%A2%E8%AF%95%E9%A2%98/">恩泽面试题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/11/18/%E6%81%A9%E6%B3%BD%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-date">
+	  <time datetime="2019-11-18T08:09:44.000Z" itemprop="datePublished">November 18, 2019</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/Users/edward-h/Desktop/2019-11-18_14-29-08.png" alt="2019-11-18_14-29-08"></p>
+<h3 id="一-数据类型"><a href="#一-数据类型" class="headerlink" title="一.数据类型"></a>一.数据类型</h3><p>####1.python2/3中的整形异同?</p>
+<ul>
+<li><p>python2中的除法，结果为整型数字（int型），例如 10/5=2，10/3=3，小数位向下取整</p>
+</li>
+<li><p>python3中的除法，结果为浮点型数字（float型）结果小数位最多保留16位小数</p>
+</li>
+</ul>
+<p>####2.什么是可变类型,什么是不可变类型?</p>
+<p>可变类型: 列表（list）,字典（dict）,集合（set）</p>
+<p>不可变类型: 元组，bool，数字（int），str</p>
+<p>可变类型无论怎么改变,依然指向原内存地址</p>
+<p>不可变类型的对象发生改变,会重新开辟新的空间,指向新的内存地址</p>
+<p>####3.可变类型和不可变类型的区别?</p>
+<p>可变类型无论怎么改变,依然指向原内存地址</p>
+<p>不可变类型的对象发生改变,会重新开辟新的空间,指向新的内存地址</p>
+<p>####4.什么是真,什么是假?</p>
+<p>Python 中常用的数据类型<code>bool</code>（布尔）类型的实例对象（值）就两个，真和假，分别用<code>True</code>和<code>False</code>表示</p>
+<p>####5.字典的底层是什么?</p>
+<p>在Python中，<strong>字典是通过散列表或说哈希表实现的</strong>。字典也被称为关联数组，还称为哈希数组等。也就是说，字典也是一个数组，但<strong>数组的索引是键经过哈希函数处理后得到的散列值</strong>。哈希函数的目的是使键均匀地分布在数组中，并且可以在内存中以O(1)的时间复杂度进行寻址，从而实现快速查找和修改。</p>
+<p>####6.单引号,双引号,三引号区别?</p>
+<p>单引号和双引号都可以用来表示一个字符串<br>单引号，双引号都用到包裹字符串，唯一不同用法在于如果字符串内有需要转义<br>的字符时候 ，单引号必须加反斜杠<br>3个引号还有一个特别棒的作用就是：加注释</p>
+<p>####7.三引号常用来干什么?</p>
+<p>加注释</p>
+<p>####8.redis端口号,mongodb端口号,mysql端口号?</p>
+<p>redis端口号:6379</p>
+<p>mongodb端口号:27017</p>
+<p>mysql端口号:3306</p>
+<p>###二.表达式</p>
+<p>####1.什么是源码,反码,补码?</p>
+<p>(1)无论是源码还是反码甚至补码.它们都是<strong>二进制</strong>的不同的表现形式.</p>
+<p>(2)任何数据在内存中都是以数据的补码形式存储的.</p>
+<p>1). 正数的反码就是其原码. </p>
+<p>2). 负数的反码在原码的基础之上 符号位不变 其他位取反.</p>
+<p>-4</p>
+<p>原码:10000000 00000000 00000000 00000100 </p>
+<p>反码:11111111 11111111 11111111 11111011</p>
+<p>1). 正数的补码就是其原码. 所以正数的原码、反码、补码都是一样的.<br>2). 负数的补码: 在其反码的基础之上加1.</p>
+<p>-6<br>原码: 10000000 00000000 00000000 00000110<br>反码: 11111111 11111111 11111111 11111001<br>补码: 11111111 11111111 11111111 11111010</p>
+<p>####2.位运算的两数交换有什么好处?</p>
+<p>位运算就是直接对整数在内存中的二进制位进行操作。</p>
+<p>####3.python2和python3中的除法有什么区别?</p>
+<ul>
+<li>python2中的除法，结果为整型数字（int型），例如 10/5=2，10/3=3，小数位向下取整</li>
+<li>python3中的除法，结果为浮点型数字（float型）结果小数位最多保留16位小数</li>
+</ul>
+<p>Python2 除法是整形</p>
+<p>python3 除法是浮点型</p>
+<p>####4.python支持自增自减操作吗?</p>
+<p>我们知道， python中的数字类型是不可变数据。也就是数字类型数据在 内存 中是不会发生改变，当变量值发生改变时，会新申请一块内存赋值为新值，然后将变量指向新的内存地址。<br>实验如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = <span class="number">10</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a)</span><br><span class="line"><span class="number">140530470127960</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a += <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a)</span><br><span class="line"><span class="number">140530470129080</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到当 <code>a</code> 的值发生改变时，<code>a</code> 指向的内存地址也发生了改变。而在C语言中，<code>a</code> 指向的内存地址并不会发生改变，而是改变内存的内容。</p>
+<p>+= 是改变变量，相当于重新生成一个变量，把操作后的结果赋予这个新生成的变量。<br>++ 是改变了对象本身，而不是变量本身，即改变数据地址所指向的内存中的内容。</p>
+<p>既然 <strong>Python 中的数字类型是不可变的</strong>，那何来的“自增”这么一说呢？</p>
+<p>####5.python2和python3中的xrange与range的区别?</p>
+<p>Python2中:</p>
+<p>xrange,不会再内存中立即创建,而是边循环边创建</p>
+<p>range,在内存中立即把所用的值都创建</p>
+<p>python3中:</p>
+<p>range,不会再内存中立即创建,而是边循环边创建.</p>
+<p>并且取消了xrange</p>
+<h3 id="三-变量本质"><a href="#三-变量本质" class="headerlink" title="三.变量本质"></a>三.变量本质</h3><p>####1.什么是引用计数?</p>
+<p>在引用计数中,每一个对象负责维护对象的所有引用的计数值,当有新的引用指向该对象,引用计数加一,去掉一个引用,引用计数减一,当引用计数为0时,被垃圾回收内存清零…</p>
+<p>####2.什么是标记清除?</p>
+<p>1.标记-清除机制，顾名思义，首先标记对象（垃圾检测），然后清除垃圾（垃圾回收）。如图:<br><img src="21210017_GTWp.png" alt="img"><br>2.首先初始所有对象标记为白色，并确定根节点对象（这些对象是不会被删除），标记它们为黑色（表示对象有效）。<br>3.将有效对象引用的对象标记为灰色（表示对象可达，但它们所引用的对象还没检查），检查完灰色对象引用的对象后，将灰色标记为黑色。<br>4.重复直到不存在灰色节点为止。最后白色结点都是需要清除的对象。</p>
+<p>####3.什么是分代回收?</p>
+<ol>
+<li><p>分代技术是一种典型的以空间换时间的技术，这也正是java里的关键技术。这种思想简单点说就是：对象存在时间越长，越可能不是垃圾，应该越少去收集。</p>
+</li>
+<li><p>这样的思想，可以减少标记-清除机制所带来的额外操作。分代就是将回收对象分成数个代，每个代就是一个链表（集合），代进行标记-清除的时间与代内对象</p>
+</li>
+<li><p>存活时间成正比例关系。</p>
+</li>
+<li><p>从上面代码可以看出python里一共有三代，每个代的threshold值表示该代最多容纳对象的个数。默认情况下，当0代超过700,或1，2代超过10，垃圾回收机制将触发。</p>
+</li>
+<li><p>0代触发将清理所有三代，1代触发会清理1,2代，2代触发后只会清理自己。</p>
+<p>例如:</p>
+<p>python将对象分为 0代, 1代, 2代,刚创建的对象为0代，对象分配次数和取消分配对象的次数的差大于阈值时就会触发垃圾回收，他们对应的阈值分别为700,10,10。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gc </span><br><span class="line">print(gc.get_threshold())</span><br><span class="line"></span><br><span class="line">[<span class="number">700</span>,<span class="number">10</span>,<span class="number">10</span>] <span class="comment"># 输出结果</span></span><br></pre></td></tr></table></figure>
+
+<p>经过 “标记-清除” 存活的对象,对象的代数+1,归入下一代对象。10次0代回收出发1次一代回收，10次1代回收出发1次2代回收，经过多代回收存活下来的对象，则不会是涉及循环引用的对象</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gc.set_threshold([<span class="number">600</span>,<span class="number">15</span>,<span class="number">15</span>]) <span class="comment"># 更改阈值</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ol>
+<p>####4.python在什么情况下创建变量会触发引用计数?</p>
+<p>当有新的引用指向该对象,会触发引用计数,引用计数加一..</p>
+<p>####5.什么是引用,什么是拷贝?</p>
+<p>(1)在 Python 程序中，每个对象都会在内存中申请开辟一块空间来保存该对象，该对象在内存中所在位置的地址被称为引用</p>
+<p>例如:引用就是给课室一个课室号。给车一个车牌号。</p>
+<p>(2)在程序开发过程中，经常涉及到数据的传递，在数据传递使用过程中，可能会发生数据被修改的问题。为了防止数据被修改，就需要在传递一个副本，即使副本被修改，也不会影响原数据的使用。为了生成这个副本，就产生了拷贝。</p>
+<p>####6.深拷贝和浅拷贝如何实现?为什么需要深拷贝和浅拷贝?</p>
+<p>(1)深拷贝:我们希望在改变新的数组（对象）的时候，不改变原数组（对象）</p>
+<p>(2)浅拷贝:将原对象或原数组的引用直接赋给新对象，新数组，新对象／数组只是原对象的一个引用</p>
+<p>实现浅拷贝和深拷贝:</p>
+<p><strong>数组浅拷贝</strong>:如果是数组，可以使用数组的一些方法实现：slice()，concat()返回一个新数组的特性实现拷贝。</p>
+<p><strong>数组深拷贝</strong>:JSON.parse(JSON.stringify())不仅适用于数组还适用于对象。</p>
+<h3 id="四-语法-函数"><a href="#四-语法-函数" class="headerlink" title="四.语法/函数"></a>四.语法/函数</h3><p>####1.python2和python3中的input和raw_input之间的区别?</p>
+<p>1、在 Python2.x 中 raw_input( ) 和 input( )，两个函数都存在，其中区别为:</p>
+<ul>
+<li><strong>raw_input( )</strong> 将所有输入作为字符串看待，返回字符串类型。</li>
+<li><strong>input( )</strong> 只能接收”数字”的输入，在对待纯数字输入时具有自己的特性，它返回所输入的数字的类型（ int, float ）。</li>
+</ul>
+<p>2、在 Python3.x 中 <strong>raw_input( )</strong> 和 <strong>input( )</strong> 进行了整合，去除了 <strong>raw_input( )</strong>，仅保留了 <strong>input( )</strong> 函数，其接收任意任性输入，将所有输入默认为字符串处理，并返回字符串类型。</p>
+<p>####2.接受到的字符串类型如何转变为实际的数据类型?</p>
+<p>例如转换为int类型</p>
+<p>int(str)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数字转换为字符串</span></span><br><span class="line">num=<span class="number">322</span></span><br><span class="line">str=<span class="string">'%d'</span>%num</span><br><span class="line">字符串转换为数字</span><br><span class="line">str=<span class="string">'5555'</span></span><br><span class="line">num=int(str)</span><br></pre></td></tr></table></figure>
+
+<p>####3.python中的三元表达式来手写一个?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="keyword">lambda</span> x:<span class="number">1</span> <span class="keyword">if</span> x &gt; <span class="number">5</span> <span class="keyword">else</span> <span class="number">2</span>        ---------- <span class="keyword">if</span> 与 <span class="keyword">else</span> 后面不加 ：</span><br><span class="line">print(a(<span class="number">5</span>))    ------ 结果：<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>####4.什么是pep8规范?说上几条?</p>
+<p>1 缩进。4个空格的缩进（编辑器都可以完成此功能），不使用Tap，更不能混合使用Tap和空格。</p>
+<p>2 每行最大长度79，换行可以使用反斜杠，最好使用圆括号。换行点要在操作符的后边敲回车。</p>
+<p>3 类和top-level函数定义之间空两行；类中的方法定义之间空一行；函数内逻辑无关段落之间空一行；其他地方尽量不要再空行。</p>
+<p>4 模块导入的顺序：按标准、三方和自己编写顺序依次导入，之间空一行。</p>
+<p>5 不要在一句import中多个库，比如import os, sys不推荐</p>
+<p>6 避免不必要的空格</p>
+<p>7 注释必须要有</p>
+<p>8 函数命名要遵循规范</p>
+<p>10 尽可能使用‘is’‘is not’取代‘==’，比如if x is not None 要优于if x。</p>
+<p>11 使用基于类的异常，每个模块或包都有自己的异常类，此异常类继承自Exception。<br>12 异常中try的代码尽可能少。</p>
+<p>####5.python解释器有几种类型?各有什么特点?</p>
+<ul>
+<li>CPython<ul>
+<li>c语言开发的 使用最广的解释器</li>
+</ul>
+</li>
+<li>IPython<ul>
+<li>基于cpython之上的一个交互式计时器 交互方式增强 功能和cpython一样</li>
+</ul>
+</li>
+<li>PyPy<ul>
+<li>目标是执行效率 采用JIT技术 对python代码进行动态编译，提高执行效率</li>
+</ul>
+</li>
+<li>JPython<ul>
+<li>运行在Java上的解释器 直接把python代码编译成Java字节码执行</li>
+</ul>
+</li>
+<li>IronPython<ul>
+<li>运行在微软 .NET 平台上的解释器，把python编译成. NET 的字节码</li>
+</ul>
+</li>
+</ul>
+<p>####6.什么是ASCII,Unicode,utf-8,gbk?</p>
+<p>ascii 是最早美国用的标准信息交换码，把所有的字母的大小写，各种符号用 二进制来表示，共有256中，加入些拉丁文等字符，1bytes代表一个字符，</p>
+<p>Unicode是为了统一世界各国语言的不用，统一用2个bytes代表一个字符，可以表达2**16=65556个，称为万国语言，特点：速度快，但浪费空间，</p>
+<p>可以用在内存处理中，兼容了utf-8，gbk，ASCII，</p>
+<p>utf-8 为了改变Unicode的这种缺点，规定1个英文字符用1个字节表示，1个中文字符用3个字节表示，特点；节省空间，速度慢，用在硬盘数据传输，网络数据传输，相比硬盘和网络速度，体现不出来的，</p>
+<p>gbk  是中文的字符编码，用2个字节代表一个字符</p>
+<p>####7.什么是python的自省?</p>
+<p>自省就是运行时能够获得对象的类型.</p>
+<p>例如:type(),dir(),getattr(),hasattr(),isinstance().</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
     <article id="post-父子组件传值"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -906,72 +1108,6 @@ var themeMenus = {};
     
 
   
-    <article id="post-加密算法种类"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/01/17/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%A7%8D%E7%B1%BB/">加密算法种类</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2019/01/17/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%A7%8D%E7%B1%BB/" class="article-date">
-	  <time datetime="2019-01-17T12:28:36.000Z" itemprop="datePublished">January 17, 2019</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="加密算法种类"><a href="#加密算法种类" class="headerlink" title="加密算法种类"></a>加密算法种类</h3><p>分为三大类:</p>
-<p>1.哈希算法</p>
-<p>2.对称加密算法</p>
-<p>3.非对称加密算法</p>
-<h4 id="1-哈希算法"><a href="#1-哈希算法" class="headerlink" title="1.哈希算法"></a>1.哈希算法</h4><p>主要作用是生成信息摘要,用来验证原信息的完整性和来源的可靠性.</p>
-<p>哈希算法具体包含MD5加密算法</p>
-<p>后来人名觉得MD5加密算法生成的信息摘要太短(128位),于是有了SHA系列算法(256)</p>
-<h4 id="2-对称加密算法"><a href="#2-对称加密算法" class="headerlink" title="2.对称加密算法"></a>2.对称加密算法</h4><p><img src="v2-3ed89eeefeec66cfa352d457660a38eb_hd.jpg" alt="img"></p>
-<p>优点:加密解密的效率高。</p>
-<p>缺点:是不够安全。</p>
-<p>种类:</p>
-<p>DES（Data Encryption Standard）：<a href="https://www.baidu.com/s?wd=数据加密标准&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">数据加密标准</a>，速度较快，适用于加密大量数据的场合。</p>
-<p>3DES（Triple DES）：是基于DES，对一块数据用三个不同的密钥进行三次加密，强度更高。</p>
-<p>AES（Advanced Encryption Standard）：高级加密标准，是下一代的加密算法标准，速度快，安全级别高。</p>
-<h4 id="3-非对称加密"><a href="#3-非对称加密" class="headerlink" title="3.非对称加密"></a>3.非对称加密</h4><p>用户做了一把锁(公钥),给另一个人,另一个人在锁里存了一些信息,然后返回给这个用户,用户用锁的钥匙(私钥)打开锁获得信息…</p>
-<p><img src="v2-1e730a20fbde6f6be1a162ada1bcb601_hd.jpg" alt="img"></p>
-<p>1.在双方建立通信的时候，服务端只要把公钥告诉给客户端，自己保留私钥。</p>
-<p>2.客户端利用获得的公钥。加密另外一个密钥X（可以是对称加密的密钥），发送给服务端。</p>
-<p>3.服务端获得消息后，用自己的私钥解密，得到里面隐含的密钥X。</p>
-<p>4.从此以后，双方可以利用密钥X进行对称加密的通信了。</p>
-<p><img src="v2-cc4b65449744bf91e8271657a8e4dcfb_hd" alt="img"></p>
-<p>在这个过程中，即使公钥被第三方截获，甚至后续的所有通信都被截获，第三方也无法进行破解。因为第二步利用公钥加密的消息，只有私钥才能解开，所以第三方永远无法知道密钥X是什么。(没有私钥就没法破解截获的信息)</p>
-<p>非对称加密算法种类:<br>RSA、Elgamal、背包算法、Rabin、Diffie-Hellman、ECC（椭圆曲线加密算法）。</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-    
-
-  
 
 
   <nav id="page-nav">
@@ -1100,6 +1236,18 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/11/18/%E6%81%A9%E6%B3%BD%E9%9D%A2%E8%AF%95%E9%A2%98/">恩泽面试题</a></h6>
+              <span>November 18, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/10/17/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/">父子组件传值</a></h6>
               <span>October 17, 2019</span>
             </div>
@@ -1154,18 +1302,6 @@ var themeMenus = {};
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/04/17/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F-%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/">单例模式,工厂模式,发布订阅模式</a></h6>
-              <span>April 17, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -1205,7 +1341,7 @@ var themeMenus = {};
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
